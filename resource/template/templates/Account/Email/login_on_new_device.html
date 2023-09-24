@@ -1,0 +1,63 @@
+{% extends "email-base.html" %} {% block email_content %}
+
+<div style="text-align: center">
+  <h3>{{subject}}</h3>
+</div>
+
+<p>Hello <strong>{{user.full_name}}</strong>,</p>
+<div style="margin: 6px 0">
+  <p>
+    We're so happy to see you here! It looks like you've just logged in to
+    <strong style="color: #1976d2">PORT.TOOLS</strong> from a new device:
+  </p>
+  <p>
+    Device:
+    <strong style="font-weight: bold; color: #1976d2">{{device}}</strong>
+  </p>
+  <p>
+    Date:
+    <strong style="font-weight: bold; color: #1976d2">{{date}}</strong>
+  </p>
+  <p>
+    To ensure the security of your account, we wanted to reach out and confirm
+    this login activity. Please use the following OTP to verify your login:
+  </p>
+  <p style="font-weight: bold; color: #1976d2">OTP: {{raw_code}}</p>
+  <p>This OTP will expire in 5 minutes.</p>
+  <p>
+    As always, if you have any questions or need assistance, don't hesitate to
+    reach out to our support team.
+  </p>
+  <p>
+    Thank you for choosing
+    <strong style="color: #1976d2">PORT.TOOLS</strong> for your needs.
+  </p>
+</div>
+<div style="margin: 5px 0">
+  <!-- Social -->
+  <p>Best regards,</p>
+  <p>The PORT.TOOLS Team</p>
+</div>
+<div style="margin-top: 20px;">
+  <div>
+    <p style="margin-bottom: 10px; text-align:center;">Let's follow us to know more information:</p>
+  </div>
+  <div style="text-align:center";>
+    <a href="#" style="display: inline-block; margin-right: 10px">
+      <img
+        src="https://port.tools/static/email/linked.png"
+      />
+    </a>
+    <a href="#" style="display: inline-block; margin-right: 10px">
+      <img
+        src="https://port.tools/static/email/twitter.png"
+      />
+    </a>
+    <a href="#" style="display: inline-block">
+      <img
+        src="https://port.tools/static/email/facebook.png"
+      />
+    </a>
+  </div>
+</div>
+{% endblock email_content %}

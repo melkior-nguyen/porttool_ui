@@ -1,0 +1,74 @@
+{% extends "email-base.html" %} {% block email_content %}
+<!-- subject -->
+<div style="display: flex; text-align: center; justify-content: center">
+  <h3 style="width: 90%">
+    {{subject}}
+    <strong style="color: #1976d2">{{info_monitor.monitor_name}}</strong>
+  </h3>
+</div>
+
+<p>Hi <strong>{{to_user.name}}</strong>,</p>
+<div style="margin: 6px 0">
+  <p>
+    We're happy to inform you that your recent update to the monitor
+    <strong style="color: #1976d2">{{info_monitor.new_monitor_name}}</strong>
+    in your farm
+    <strong style="color: #1976d2">{{info_monitor.farm_name}}</strong>
+    has been successfully implemented:
+  </p>
+  <div>
+    <p style="margin: 3px 0">
+      Monitor Updated:
+      <span style="color: #1976d2"> {{info_monitor.new_monitor_name}}</span>
+    </p>
+    <p style="margin: 3px 0">
+      Monitor Old Name:
+      <span style="color: #1976d2"> {{info_monitor.old_monitor_name}}</span>
+    </p>
+    <p style="margin: 3px 0">
+      Farm:
+      <span style="color: #1976d2"> {{info_monitor.farm_name}}</span>
+    </p>
+    <p style="margin: 3px 0">
+      Project:
+      <span style="color: #1976d2"> {{info_monitor.project_name}}</span>
+    </p>
+    <p style="margin: 3px 0">
+      Update Date:
+      <span style="color: #1976d2"> {{info_monitor.date_update}}</span>
+    </p>
+  </div>
+  <p>
+    Your commitment to effective monitoring is truly appreciated. Should you
+    have any questions or require support with your monitor, please feel free to
+    contact us. We're here to support you.
+  </p>
+  <p>We would love to hear from you and see your amazing project.</p>
+  <p>
+    Thank you for choosing
+    <strong style="color: #1976d2">Port.Tools </strong> as your project monitor
+    service.
+  </p>
+</div>
+<div style="margin: 5px 0">
+  <!-- Social -->
+  <p>Best regards,</p>
+  <p>The PORT.TOOLS Team 🌟</p>
+</div>
+<div style="margin-top: 20px;">
+  <div>
+    <p style="margin-bottom: 10px; text-align:center;">Let's follow us to know more information:</p>
+  </div>
+  <div style="text-align:center";>
+    <a href="#" style="display: inline-block; margin-right: 10px">
+      <img src="https://port.tools/static/email/linked.png" />
+    </a>
+    <a href="#" style="display: inline-block; margin-right: 10px">
+      <img src="https://port.tools/static/email/twitter.png" />
+    </a>
+    <a href="#" style="display: inline-block">
+      <img src="https://port.tools/static/email/facebook.png" />
+    </a>
+  </div>
+</div>
+{% endblock email_content %}

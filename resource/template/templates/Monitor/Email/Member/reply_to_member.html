@@ -1,0 +1,52 @@
+
+{% extends "email-base.html" %} {% block email_content %}
+
+<div style="display: flex; text-align: center; justify-content: center">
+  <h3 style="width: 80%">{{subject}}</h3>
+</div>
+
+<p>Hello <strong>{{member.name}}</strong>,</p>
+<div style="margin: 6px 0">
+  <p>
+    Great news! Your acceptance of the invitation to join the project has been
+    successful.
+  </p>
+  <p>
+    You are now a part of the team for
+    <strong style="color: #1976d2"> {{project}}'s </strong> project. We look
+    forward to your contributions and collaboration.
+  </p>
+  <p>
+    As always, if you have any questions or need assistance, don't hesitate to
+    reach out to our support team.
+  </p>
+  <p>Looking forward to achieving great things together!</p>
+</div>
+<div style="margin: 5px 0">
+  <!-- Social -->
+  <p>Best regards,</p>
+  <p>The PORT.TOOLS Team</p>
+</div>
+<div style="margin-top: 20px;">
+  <div>
+    <p style="margin-bottom: 10px; text-align:center;">Let's follow us to know more information:</p>
+  </div>
+  <div style="text-align:center";>
+    <a href="#" style="display: inline-block; margin-right: 10px">
+      <img
+        src="https://port.tools/static/email/linked.png"
+      />
+    </a>
+    <a href="#" style="display: inline-block; margin-right: 10px">
+      <img
+        src="https://port.tools/static/email/twitter.png"
+      />
+    </a>
+    <a href="#" style="display: inline-block">
+      <img
+        src="https://port.tools/static/email/facebook.png"
+      />
+    </a>
+  </div>
+</div>
+{% endblock email_content %}

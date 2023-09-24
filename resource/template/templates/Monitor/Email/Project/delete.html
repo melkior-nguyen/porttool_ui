@@ -1,0 +1,64 @@
+{% extends "email-base.html" %} {% block email_content %}
+<!-- subject -->
+<div style="text-align: center">
+  <h3>{{subject}}</h3>
+</div>
+
+<p>Hello <strong>{{project.owner.full_name}}</strong>,</p>
+<div style="margin: 6px 0">
+  <p>
+    We want to inform you that the project
+    <strong style="color: #1976d2"> {{project.name}} </strong> has been
+    successfully deleted:
+  </p>
+  <div>
+    <p style="margin: 3px 0">
+      Project Name:
+      <span style="color: #1976d2"> {{project.name}}</span>
+    </p>
+    <p style="margin: 3px 0">
+      Deletion Date:
+      <span style="color: #1976d2"> {{project.date_delete}}</span>
+    </p>
+  </div>
+  <p>
+    Decisions like these are integral to monitoring your projects effectively.
+    Should you have any questions or need assistance during this transition,
+    please feel free to contact us.
+  </p>
+  <p>
+    Thank you for choosing
+    <strong style="color: #1976d2">Port.Tools </strong> as your project monitor
+    service.
+  </p>
+</div>
+<div style="margin: 5px 0">
+  <!-- Social -->
+  <p>Best regards,</p>
+  <p>The PORT.TOOLS Team 🌟</p>
+</div>
+<div
+  style="
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    flex-direction: column;
+  "
+>
+  <div>
+    <p style="margin-bottom: 10px">Let's follow us to know more information:</p>
+  </div>
+  <div>
+    <a href="#" style="display: inline-block; margin-right: 10px">
+      <img src="https://port.tools/static/email/linked.png" />
+    </a>
+    <a href="#" style="display: inline-block; margin-right: 10px">
+      <img src="https://port.tools/static/email/twitter.png" />
+    </a>
+    <a href="#" style="display: inline-block">
+      <img src="https://port.tools/static/email/facebook.png" />
+    </a>
+  </div>
+</div>
+{% endblock email_content %}

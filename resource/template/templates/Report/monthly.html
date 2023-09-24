@@ -1,0 +1,139 @@
+{% extends "email-base-report.html" %} {% block email_content %}
+<!-- subject -->
+<div class="content">
+  <h2>Summary of Monitoring Data</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Week</th>
+        <th>Monitor</th>
+        <th>Visits</th>
+        <th>Successes</th>
+        <th>Failures</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="4">
+          <p>Week 1</p>
+          <p>2023-01-01 to 2023-01-08</p>
+        </td>
+        <td>Monitor 1</td>
+        <td>100</td>
+        <td class="success-icon">90 &#10004;</td>
+        <td class="failure-icon">10 &#10006;</td>
+      </tr>
+      <!-- Add more data rows for Week 1 as needed -->
+      <tr>
+        <td>Monitor 2</td>
+        <td>120</td>
+        <td class="success-icon">60 &#10004;</td>
+        <td class="failure-icon">60 &#10006;</td>
+      </tr>
+      <tr>
+        <td>Monitor 3</td>
+        <td>80</td>
+        <td class="success-icon">60 &#10004;</td>
+        <td class="failure-icon">20 &#10006;</td>
+      </tr>
+      <tr>
+        <td>Monitor 4</td>
+        <td>150</td>
+        <td class="success-icon">100 &#10004;</td>
+        <td class="failure-icon">50 &#10006;</td>
+      </tr>
+      <!-- Repeat the same structure for Weeks 2, 3, and 4 -->
+      <tr>
+        <td rowspan="4">
+          <p>Week 2</p>
+          <p>2023-01-09 to 2023-01-16</p>
+        </td>
+        <td>Monitor 1</td>
+        <td>100</td>
+        <td class="success-icon">55 &#10004;</td>
+        <td class="failure-icon">45 &#10006;</td>
+      </tr>
+      <!-- Add more data rows for Week 1 as needed -->
+      <tr>
+        <td>Monitor 2</td>
+        <td>120</td>
+        <td class="success-icon">60 &#10004;</td>
+        <td class="failure-icon">60 &#10006;</td>
+      </tr>
+      <tr>
+        <td>Monitor 3</td>
+        <td>80</td>
+        <td class="success-icon">60 &#10004;</td>
+        <td class="failure-icon">20 &#10006;</td>
+      </tr>
+      <tr>
+        <td>Monitor 4</td>
+        <td>150</td>
+        <td class="success-icon">100 &#10004;</td>
+        <td class="failure-icon">50 &#10006;</td>
+      </tr>
+      <!-- Repeat the same structure for Weeks 2, 3, and 4 -->
+      <tr>
+        <td rowspan="4">
+          <p>Week 3</p>
+          <p>2023-01-11 to 2023-01-21</p>
+        </td>
+        <td>Monitor 1</td>
+        <td>100</td>
+        <td class="success-icon">90 &#10004;</td>
+        <td class="failure-icon">10 &#10006;</td>
+      </tr>
+      <!-- Add more data rows for Week 1 as needed -->
+      <tr>
+        <td>Monitor 2</td>
+        <td>120</td>
+        <td class="success-icon">60 &#10004;</td>
+        <td class="failure-icon">60 &#10006;</td>
+      </tr>
+      <tr>
+        <td>Monitor 3</td>
+        <td>80</td>
+        <td class="success-icon">60 &#10004;</td>
+        <td class="failure-icon">20 &#10006;</td>
+      </tr>
+      <tr>
+        <td>Monitor 4</td>
+        <td>150</td>
+        <td class="success-icon">100 &#10004;</td>
+        <td class="failure-icon">50 &#10006;</td>
+      </tr>
+      <!-- Repeat the same structure for Weeks 2, 3, and 4 -->
+      <tr>
+        <td rowspan="4">
+          <p>Week 4</p>
+          <p>2023-01-22 to 2023-01-2</p>
+        </td>
+        <td>Monitor 1</td>
+        <td>100</td>
+        <td class="success-icon">80 &#10004;</td>
+        <td class="failure-icon">20 &#10006;</td>
+      </tr>
+      <!-- Add more data rows for Week 1 as needed -->
+      <tr>
+        <td>Monitor 2</td>
+        <td>120</td>
+        <td class="success-icon">60 &#10004;</td>
+        <td class="failure-icon">60 &#10006;</td>
+      </tr>
+      <tr>
+        <td>Monitor 3</td>
+        <td>80</td>
+        <td class="success-icon">60 &#10004;</td>
+        <td class="failure-icon">20 &#10006;</td>
+      </tr>
+      <tr>
+        <td>Monitor 4</td>
+        <td>150</td>
+        <td class="success-icon">100 &#10004;</td>
+        <td class="failure-icon">50 &#10006;</td>
+      </tr>
+      <!-- Repeat the same structure for Weeks 2, 3, and 4 -->
+    </tbody>
+  </table>
+</div>
+{% endblock email_content %}

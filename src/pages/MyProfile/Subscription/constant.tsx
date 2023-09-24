@@ -1,0 +1,233 @@
+import {
+  BsDisplayportFill,
+  BsSkype,
+  BsSlack,
+  BsTelegram,
+} from "react-icons/bs";
+import { FaMicrosoft, FaSms, FaViber, FaWhatsappSquare } from "react-icons/fa";
+import {
+  MdEmail,
+  MdHttps,
+  MdOutlineHttp,
+  MdOutlineHttps,
+} from "react-icons/md";
+import {
+  SiApachekafka,
+  SiElasticsearch,
+  SiMysql,
+  SiPostgresql,
+  SiRedis,
+} from "react-icons/si";
+
+export const PRICE_DATA = [
+  {
+    id: 1,
+    code: "Trial",
+    tagColor: "#11C15B",
+    label: "Trial",
+    price: 0,
+    maxProject: 0,
+    maxMonitor: 0,
+    monitorTypes: "[...]",
+    monitorTypesData: [],
+    intervalCredit: 0,
+    intervalUnit: "DAY",
+    pricingList: [
+      {
+        id: "notificationEmail",
+        title: "Email",
+        icon: <MdEmail />,
+        status: null,
+      },
+      {
+        id: "notificationSms",
+        title: "SMS",
+        icons: <FaSms />,
+        status: null,
+      },
+      {
+        id: "notificationMsteam",
+        title: "Microsoft",
+        icon: <FaMicrosoft />,
+        status: null,
+      },
+      {
+        id: "notificationSlack",
+        title: "Slack",
+        icon: <BsSlack />,
+        status: null,
+      },
+      {
+        id: "notificationSkype",
+        title: "Skypes",
+        icon: <BsSkype />,
+        status: null,
+      },
+      {
+        id: "notificationTelegram",
+        title: "Telegram",
+        icon: <BsTelegram />,
+        status: null,
+      },
+
+      {
+        id: "notificationWhatsap",
+        title: "Whatsapp",
+        icon: <FaWhatsappSquare />,
+        status: null,
+      },
+      {
+        id: "notificationViber",
+        title: "Viber",
+        icon: <FaViber />,
+        status: null,
+      },
+    ],
+  },
+  {
+    id: 2,
+    code: "Business",
+    tagColor: "#FF8B26",
+    label: "Business",
+    price: "-",
+    maxProject: 0,
+    maxMonitor: 0,
+    monitorTypes: "[...]",
+    monitorTypesData: [
+      { value: "port", icon: <BsDisplayportFill /> },
+      { value: "http", icon: <MdOutlineHttp /> },
+      { value: "https", icon: <MdHttps /> },
+      { value: "http ssl", icon: <MdOutlineHttps /> },
+      { value: "mysql", icon: <SiMysql /> },
+      { value: "postgres", icon: <SiPostgresql /> },
+    ],
+    intervalCredit: 0,
+    intervalUnit: "DAY",
+    pricingList: [
+      {
+        id: "notificationEmail",
+        title: "Email",
+        icon: <MdEmail />,
+        status: null,
+      },
+      {
+        id: "notificationSms",
+        title: "SMS",
+        icons: <FaSms />,
+        status: null,
+      },
+      {
+        id: "notificationMsteam",
+        title: "Microsoft",
+        icon: <FaMicrosoft />,
+        status: null,
+      },
+      {
+        id: "notificationSlack",
+        title: "Slack",
+        icon: <BsSlack />,
+        status: null,
+      },
+      {
+        id: "notificationSkype",
+        title: "Skypes",
+        icon: <BsSkype />,
+        status: null,
+      },
+      {
+        id: "notificationTelegram",
+        title: "Telegram",
+        icon: <BsTelegram />,
+        status: null,
+      },
+
+      {
+        id: "notificationWhatsap",
+        title: "Whatsapp",
+        icon: <FaWhatsappSquare />,
+        status: null,
+      },
+      {
+        id: "notificationViber",
+        title: "Viber",
+        icon: <FaViber />,
+        status: null,
+      },
+    ],
+  },
+  {
+    id: 3,
+    code: "Enterprise",
+    tagColor: "#00905F",
+    label: "Enterprise",
+    price: "-",
+    maxProject: 0,
+    maxMonitor: 0,
+    monitorTypes: "[...]",
+    monitorTypesData: [
+      { value: "port", icon: <BsDisplayportFill /> },
+      { value: "http", icon: <MdOutlineHttp /> },
+      { value: "https", icon: <MdHttps /> },
+      { value: "http ssl", icon: <MdOutlineHttps /> },
+      { value: "smtp", icon: <BsDisplayportFill /> },
+      { value: "mysql", icon: <SiMysql /> },
+      { value: "postgres", icon: <SiPostgresql /> },
+      { value: "redis", icon: <SiRedis /> },
+      { value: "elastic search", icon: <SiElasticsearch /> },
+      { value: "kafka", icon: <SiApachekafka /> },
+    ],
+    intervalCredit: 0,
+    intervalUnit: "DAY",
+    pricingList: [
+      {
+        id: "notificationEmail",
+        title: "Email",
+        icon: <MdEmail />,
+        status: null,
+      },
+      {
+        id: "notificationSms",
+        title: "SMS",
+        icons: <FaSms />,
+        status: null,
+      },
+      {
+        id: "notificationMsteam",
+        title: "Microsoft",
+        icon: <FaMicrosoft />,
+        status: null,
+      },
+      {
+        id: "notificationSlack",
+        title: "Slack",
+        icon: <BsSlack />,
+        status: null,
+      },
+      {
+        id: "notificationSkype",
+        title: "Skypes",
+        icon: <BsSkype />,
+        status: null,
+      },
+      {
+        id: "notificationTelegram",
+        title: "Telegram",
+        icon: <BsTelegram />,
+        status: null,
+      },
+
+      {
+        id: "notificationWhatsap",
+        title: "Whatsapp",
+        icon: <FaWhatsappSquare />,
+        status: null,
+      },
+      {
+        id: "notificationViber",
+        title: "Viber",
+        icon: <FaViber />,
+        status: null,
+      },
+    ],
+  },
+];

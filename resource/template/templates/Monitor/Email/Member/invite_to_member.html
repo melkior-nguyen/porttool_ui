@@ -1,0 +1,68 @@
+{% extends "email-base.html" %} {% block email_content %}
+
+<div style="display: flex; text-align: center; justify-content: center">
+  <h3 style="width: 70%">
+    {{subject}}
+    <strong style="color: #1976d2">{{project}}</strong> project
+  </h3>
+</div>
+
+<p>Dear <strong>{{member.name}}</strong>,</p>
+<div style="margin: 6px 0">
+  <p>
+    You've received an invitation to join a project! {{creator.name}} has sent
+    you an invitation code to become a part of the project
+    <strong style="color: #1976d2">{{project}}</strong>. Here are the details:
+  </p>
+  <div
+    style="
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+      margin-bottom: 24px;
+    "
+  >
+    <a
+      href="{{invitation_link}}"
+      style="
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: rgb(76, 175, 80);
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 30px;
+        font-weight: bold;
+      "
+      >View Invitation</a
+    >
+  </div>
+  <p>
+    Please note that this invitation is valid for the next 24 hours. After that,
+    it will expire, and you won't be able to use the provided code to join the
+    project.
+  </p>
+  <p>
+    We appreciate your interest in using our services and look forward to having
+    you as a part of the team!
+  </p>
+  <p>
+    <strong>Note:</strong>
+    This invitation was intended for
+    <strong style="color: #1976d2">{{creator.email}}</strong>. If you were not
+    expecting this invitaion, you can ignore this email. If {{creator.name}} is
+    sending you to many emails, you can
+    <span style="color: #1976d2">block them</span> or
+    <span style="color: #1976d2">report abuse</span>
+  </p>
+</div>
+<div style="margin: 5px 0">
+  <!-- Social -->
+  <h5 style="margin: 0">
+    Button not working? Copy and paste this link into you browser
+  </h5>
+  <a href="{{invitation_link}}" style="color: #1976d2; text-decoration: none">
+    {{invitation_link}}
+  </a>
+</div>
+{% endblock email_content %}

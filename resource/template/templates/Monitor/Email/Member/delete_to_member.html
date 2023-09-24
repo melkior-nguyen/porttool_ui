@@ -1,0 +1,65 @@
+{% extends "email-base.html" %} {% block email_content %}
+<!-- subject -->
+<div style="text-align: center">
+  <h3>{{subject}} {{project}}'s Project</h3>
+</div>
+
+<p>Hi <strong>{{member.name}}</strong>,</p>
+<div style="margin: 6px 0">
+  <p>
+    We're writing to let you know that you have been removed from the
+    <strong style="color: #1976d2"> {{project}}'s</strong> project by
+    <strong style="color: #1976d2"> {{project_manager.name}}</strong>.
+  </p>
+  <div>
+    <p style="margin: 3px 0">
+      Project:
+      <span style="color: #1976d2"> {{project}}</span>
+    </p>
+    <p style="margin: 3px 0">
+      Delete Date:
+      <span style="color: #1976d2"> {{delete_date}}</span>
+    </p>
+  </div>
+  <p>
+    This change has been implemented for project management reasons. If you have
+    any questions or need further information, please feel free to contact us or
+    your project manager.
+  </p>
+  <p>
+    We appreciate your contributions during your time with us, and we wish you
+    all the best in your future endeavors.
+  </p>
+  <p>
+    Thank you for choosing
+    <strong style="color: #1976d2">PORT.TOOLS</strong> for your needs.
+  </p>
+</div>
+<div style="margin: 5px 0">
+  <!-- Social -->
+  <p>Best regards,</p>
+  <p>The PORT.TOOLS Team 🌟</p>
+</div>
+<div style="margin-top: 20px;">
+  <div>
+    <p style="margin-bottom: 10px; text-align:center;">Let's follow us to know more information:</p>
+  </div>
+  <div style="text-align:center";>
+    <a href="#" style="display: inline-block; margin-right: 10px">
+      <img
+        src="https://port.tools/static/email/linked.png"
+      />
+    </a>
+    <a href="#" style="display: inline-block; margin-right: 10px">
+      <img
+        src="https://port.tools/static/email/twitter.png"
+      />
+    </a>
+    <a href="#" style="display: inline-block">
+      <img
+        src="https://port.tools/static/email/facebook.png"
+      />
+    </a>
+  </div>
+</div>
+{% endblock email_content %}

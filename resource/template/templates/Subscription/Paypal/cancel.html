@@ -1,0 +1,88 @@
+{% extends "email-base.html" %} {% block email_content %}
+<!-- subject -->
+<div style="text-align: center">
+  <h3>{{subject}}</h3>
+</div>
+
+<p>Dear <strong>{{to_user.name}}</strong>,</p>
+<div style="margin: 6px 0">
+  <p>
+    We are sorry to hear that you will no longer be using our subscription
+    service. We hope you enjoyed using it. Your subscription,
+    <strong style="color: #1976d2"
+      >"{{subscription_detail.current_subscription}}, 1 WEEK"</strong
+    >, will terminate at the end of the current billing period, which is on
+    <strong style="color: #1976d2"
+      >{{subscription_detail.date_end_current_subscription}}</strong
+    >
+  </p>
+  <div>
+    <p style="margin: 3px 0">
+      Subcription Next:
+      <span style="color: #1976d2">
+        {{subscription_detail.next_subscription}}</span
+      >
+    </p>
+    <p style="margin: 3px 0">
+      Subscription Current:
+      <span style="color: #1976d2">
+        {{subscription_detail.current_subscription}}</span
+      >
+    </p>
+    <p style="margin: 3px 0">
+      Date Will Start:
+      <span style="color: #1976d2">
+        {{subscription_detail.date_will_start}}</span
+      >
+    </p>
+  </div>
+  <p>
+    After completing your
+    <strong style="color: #1976d2">
+      {{subscription_detail.current_subscription}}</strong
+    >
+    registration, your subscription will automatically switch to the
+    <strong style="color: #1976d2">
+      {{subscription_detail.next_subscription}}</strong
+    >
+    that you have requested.
+  </p>
+  <p>
+    We are committed to delivering a premium experience throughout your
+    subscription. You can continue to enjoy all the benefits and features that
+    come with our service.
+  </p>
+  <p>
+    Thank you for using our
+    <strong style="color: #1976d2">Port.Tools's </strong> services! We
+    appreciate your trust in us.
+  </p>
+</div>
+<div style="margin: 5px 0">
+  <!-- Social -->
+  <p>Best regards,</p>
+  <p>The PORT.TOOLS Team 🌟</p>
+</div>
+<div style="margin-top: 20px;">
+  <div>
+    <p style="margin-bottom: 10px; text-align:center;">Let's follow us to know more information:</p>
+  </div>
+  <div style="text-align:center";>
+    <a href="#" style="display: inline-block; margin-right: 10px">
+        <img
+          src="https://port.tools/static/email/linked.png"
+        />
+      </a>
+      <a href="#" style="display: inline-block; margin-right: 10px">
+        <img
+          src="https://port.tools/static/email/twitter.png"
+        />
+      </a>
+      <a href="#" style="display: inline-block">
+        <img
+          src="https://port.tools/static/email/facebook.png"
+        />
+      </a>
+  </div>
+</div>
+{% endblock email_content %}

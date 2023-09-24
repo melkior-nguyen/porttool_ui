@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monitoring Report</title>
+    <style>
+      /* Reset default email styles */
+      body,
+      table,
+      td,
+      th {
+        margin: 0;
+        padding: 0;
+        border-collapse: collapse;
+      }
+
+      /* Set a background color for the entire email */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f6f6f9;
+      }
+
+      /* Container to center email content */
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      /* Header styles */
+      .header {
+        text-align: center;
+        background-color: #1976d2;
+        padding: 20px;
+      }
+
+      .header img {
+        max-width: 200px;
+        height: auto;
+      }
+
+      .header h1 {
+        color: #ffffff;
+      }
+
+      /* Content styles */
+      .content {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .content h2 {
+        color: #1976d2;
+      }
+
+      /* Table styles */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid #dddddd;
+      }
+
+      th,
+      td {
+        padding: 10px;
+        text-align: center;
+      }
+
+      th {
+        background-color: #f2f2f2;
+      }
+
+      .success-icon {
+        color: green;
+      }
+
+      .failure-icon {
+        color: red;
+      }
+
+      /* Footer styles */
+      .footer {
+        font-size: 14px;
+        color: #65735b;
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      /* Responsive styles for smaller screens */
+      @media screen and (max-width: 600px) {
+        .container {
+          width: 100%;
+          padding: 10px;
+        }
+
+        table {
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img
+          src="https://port.tools/static/logo/port_tool_light.png"
+          alt="Company Logo"
+        />
+        <h1>Monthly Monitoring Report</h1>
+      </div>
+      {% block email_content %} {% endblock email_content %}
+      <div class="footer">
+        <a
+          href="#"
+          style="color: #65735b; text-decoration: underline"
+          target="_blank"
+          >Unsubscribe</a
+        >
+        &nbsp; | &nbsp;
+        <a
+          href="localhost:8000/privacy-policy"
+          style="color: #65735b; text-decoration: underline"
+          target="_blank"
+          >Privacy Policy</a
+        >
+        &nbsp; | &nbsp;
+        <a
+          href="#"
+          style="color: #65735b; text-decoration: underline"
+          target="_blank"
+          data-saferedirecturl="#"
+          >Contact Support</a
+        >
+        <div
+          style="font-family: Helvetica, Arial, sans-serif; word-break: normal"
+          class="m_9121338004645897019address-link"
+        >
+          Made with ❤️ from
+          <a href="https://www.google.com/search?q=viet+nam">VietNam</a>
+        </div>
+        <div
+          style="font-family: Helvetica, Arial, sans-serif; word-break: normal"
+        >
+          © 2023 Port.Tools® Inc.
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

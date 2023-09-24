@@ -1,0 +1,197 @@
+PortMonitorRequiredFields = (
+    "name",
+    "interval",
+    "timeout",
+    "retries",
+    "host",
+    "port",
+    "assign_zones",
+)
+
+PortMonitorOptionalFields = (
+    "pause",
+    "pin_order",
+   
+)
+
+pin_order (checkbox)
+pause (checkbox)
+name (text)
+type (dropdown) - host (text) - port (text)
+internal (dropdown) - timeout (dropdown)
+retries (number) - assign_zones (multi select)
+---
+HttpMonitorRequiredFields = (
+    "name",
+    "assign_zones",
+    "interval",
+    "timeout",
+    "retries",
+    "request_payload",
+    "host",
+    "port",
+)
+
+HttpMonitorOptionalFields = (
+    "pause",
+    "pin_order",
+    "path",
+    "user",
+    "password",
+    "response_regex",
+    "expected_codes",
+    "follow_redirect",
+    "headers",
+)
+
+pin_order (checkbox)
+pause (checkbox)
+name (text)
+type (dropdown) - request_payload (dropdown) - host (text) - port (text)
+path (/ + text)
+internal (dropdown) - timeout (dropdown)
+retries (dropdown) - assign_zones (multi select)
+user (text) - password (password)
+response_regex (Json - XML) - expected_codes (dropdown)
+follow_redirect (text)
+headers (Dynamic field)
+
+==> Issue dynamic form:
+    1- Layout. *** => Array [][]
+    2- Component muilti slect chip.
+    3- Component JSON, XML ***
+---
+HttpsMonitorRequiredFields = (
+    "name",
+    "interval",
+    "timeout",
+    "retries",
+    "host",
+    "port",
+    "assign_zones",
+)
+
+HttpsMonitorOptionalFields = (
+    "pause",
+    "pin_order",
+    "path",
+    "user",
+    "password",
+    "ssl_check",
+    "notify_ssl_nearly_expries_in_days",
+    "request_payload",
+    "response_regex",
+    "expected_codes",
+    "follow_redirect",
+    "headers",
+)
+
+pin_order (checkbox)
+pause (checkbox)
+name (text)
+type (dropdown) - request_payload (dropdown) - host (text) - port (text)
+path (/ + text)
+internal (dropdown) - timeout (dropdown)
+retries (dropdown) - assign_zones (multi select)
+user (text) - password (password)
+ssl_check (checkbox) - notify_ssl_nearly_expries_in_days (number)
+response_regex (Json - XML) - expected_codes (dropdown)
+follow_redirect (text)
+headers (Dynamic field)
+---
+PostgressMonitorRequiredFields = (
+    "name",
+    "interval",
+    "timeout",
+    "retries",
+    "host",
+    "port",
+    "database",
+    "assign_zones",
+)
+
+PostgressMonitorOptionalFields = (
+    "pause",
+    "pin_order",
+    "user",
+    "password",
+    "query",
+    "query_return_expect",
+)
+
+pin_order (checkbox)
+pause (checkbox)
+name (text)
+type (dropdown) - host (text) - port (text)
+internal (dropdown) - timeout (dropdown)
+retries (dropdown) - assign_zones (multi select)
+user (text) - password (password)
+query (Json - XML) - query_return_expect (dropdown)
+---
+RedisMonitorRequiredFields = (
+    "name",
+    "interval",
+    "timeout",
+    "retries",
+    "host",
+    "port",
+    "database",
+    "assign_zones",
+)
+
+RedisMonitorOptionalFields = (
+    "pause",
+    "pin_order",
+    "password",
+)
+
+pin_order (checkbox)
+pause (checkbox)
+name (text)
+type (dropdown) - host (text) - port (text)
+internal (dropdown) - timeout (dropdown)
+retries (dropdown) - assign_zones (multi select)
+database (text) - password (password)
+---
+SmtpMonitorRequiredFields = (
+    "name",
+    "interval",
+    "timeout",
+    "retries",
+    "host",
+    "port",
+    "assign_zones",
+)
+
+SmtpMonitorOptionalFields = (
+    "pause",
+    "pin_order",
+    "user",
+    "password",
+)
+
+pin_order (checkbox)
+pause (checkbox)
+name (text)
+type (dropdown) - host (text) - port (text)
+internal (dropdown) - timeout (dropdown)
+retries (dropdown) - assign_zones (multi select) - password (password)
+---
+APIMonitorRequiredFields = (
+    "name",
+    "interval",
+    "timeout",
+    "retries",
+    "api_public_key",
+)
+
+APIMonitorOptionalFields = (
+    "pause",
+    "pin_order",
+)
+
+pin_order (checkbox)
+pause (checkbox)
+name (text)
+type (dropdown) - api_public_key (text)
+internal (dropdown) - timeout (dropdown) - retries (dropdown)

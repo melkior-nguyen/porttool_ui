@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Your Email Title</title>
+  </head>
+  <style>
+    svg {
+      font-size: 30px;
+    }
+
+    path {
+      fill: #1976d2;
+    }
+
+    a:hover {
+      opacity: 0.8;
+      transition: all 0.3s ease-in-out;
+    }
+    /* Mobile styles */
+    @media only screen and (max-width: 600px) {
+      /* Adjust font size and padding for better readability */
+      body {
+        font-size: 17px;
+        padding: 10px;
+      }
+
+      /* Center align images */
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+
+      /* Adjust table width to fit smaller screens */
+      table {
+        max-width: 100%;
+      }
+
+      /* Add space between social icons in mobile view */
+      .social-icons a {
+        margin-right: 5px;
+      }
+
+      /* Center align buttons in mobile view */
+      .button {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  </style>
+  <body
+    style="
+      font-family: Arial, sans-serif;
+      background-color: #f6f6f9;
+      padding: 20px;
+    "
+  >
+    <div
+      style="
+        max-width: 600px;
+        margin: 0 auto;
+        font-size: 17px;
+        line-height: 24px;
+      "
+    >
+      <table
+        width="100%"
+        bgcolor="#ffffff"
+        style="
+          width: 100%;
+          background-color: #ffffff;
+          border-collapse: collapse;
+        "
+      >
+        <tr>
+          <td align="center" bgcolor="#ffffff">
+            <div style="height: 75px; background: #1976d2">
+              <img
+                src="https://port.tools/static/logo/port_tool_light.png"
+                style="object-fit: contain; width: 200px; height: 75px"
+              />
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff" style="padding: 10px 30px">
+            {% block email_content %} {% endblock email_content %}
+          </td>
+        </tr>
+        <tr>
+          <td align="center" style="padding: 20px">
+            <hr />
+            <p>Explore My Page</p>
+            <a
+              href="http://localhost:8000/"
+              style="
+                display: inline-block;
+                padding: 10px 20px;
+                background-color: #007bff;
+                color: #ffffff;
+                text-decoration: none;
+                border-radius: 5px;
+                font-weight: bold;
+              "
+              >PORT.TOOLS</a
+            >
+          </td>
+        </tr>
+      </table>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+          <tr>
+            <td
+              align="center"
+              width="100%"
+              style="
+                color: #65735b;
+                font-size: 14px;
+                line-height: 24px;
+                padding-bottom: 30px;
+                padding-top: 30px;
+              "
+            >
+              <a
+                href="#"
+                style="color: #65735b; text-decoration: underline"
+                target="_blank"
+                >Unsubscribe</a
+              >
+              &nbsp; | &nbsp;
+              <a
+                href="localhost:8000/privacy-policy"
+                style="color: #65735b; text-decoration: underline"
+                target="_blank"
+                >Privacy Policy</a
+              >
+              &nbsp; | &nbsp;
+              <a
+                href="#"
+                style="color: #65735b; text-decoration: underline"
+                target="_blank"
+                data-saferedirecturl="#"
+                >Contact Support</a
+              >
+              <div
+                style="
+                  font-family: Helvetica, Arial, sans-serif;
+                  word-break: normal;
+                "
+                class="m_9121338004645897019address-link"
+              >
+                Made with ❤️ from
+                <a href="https://www.google.com/search?q=viet+nam">VietNam</a>
+              </div>
+              <div
+                style="
+                  font-family: Helvetica, Arial, sans-serif;
+                  word-break: normal;
+                "
+              >
+                © {{year}} Port.Tools® Inc.
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

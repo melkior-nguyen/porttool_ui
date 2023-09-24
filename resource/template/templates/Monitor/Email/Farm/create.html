@@ -1,0 +1,66 @@
+{% extends "email-base.html" %} {% block email_content %}
+<!-- subject -->
+<div style="text-align: center">
+  <h3>
+    {{subject}}:
+    <strong style="color: #1976d2">{{farm.farm_name}}</strong>
+  </h3>
+</div>
+
+<p>Hi <strong>{{farm.owner.full_name}}</strong>,</p>
+<div style="margin: 6px 0">
+  <p>
+    We're happy to inform you that a new farm has been successfully created by
+    <strong> {{farm.creator.full_name}}: </strong>
+  </p>
+  <div>
+    <p style="margin: 3px 0">
+      Farm Name:
+      <span style="color: #1976d2"> {{farm.farm_name}}</span>
+    </p>
+    <p style="margin: 3px 0">
+      Creation Date:
+      <span style="color: #1976d2"> {{farm.created}}</span>
+    </p>
+  </div>
+  <p>
+    If you have any questions, need assistance, or simply want to chat about
+    your <span style="color: #1976d2">{{farm.name}}</span> farm, please feel
+    free to contact us. We're here to support you.
+  </p>
+  <p>We would love to hear from you and see your amazing project.</p>
+  <p>
+    Thank you for choosing
+    <strong style="color: #1976d2">Port.Tools </strong> as your project monitor
+    service. If you have any further questions or need any assistance,
+    please feel free to contact us
+  </p>
+</div>
+<div style="margin: 5px 0">
+  <!-- Social -->
+  <p>Best regards,</p>
+  <p>The PORT.TOOLS Team 🌟</p>
+</div>
+<div style="margin-top: 20px;">
+  <div>
+    <p style="margin-bottom: 10px; text-align:center;">Let's follow us to know more information:</p>
+  </div>
+  <div style="text-align:center";>
+    <a href="#" style="display: inline-block; margin-right: 10px">
+      <img
+        src="https://port.tools/static/email/linked.png"
+      />
+    </a>
+    <a href="#" style="display: inline-block; margin-right: 10px">
+      <img
+        src="https://port.tools/static/email/twitter.png"
+      />
+    </a>
+    <a href="#" style="display: inline-block">
+      <img
+        src="https://port.tools/static/email/facebook.png"
+      />
+    </a>
+  </div>
+</div>
+{% endblock email_content %}

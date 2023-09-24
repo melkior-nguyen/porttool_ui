@@ -1,0 +1,49 @@
+{% extends "email-base.html" %} {% block email_content %}
+
+<div style="text-align: center">
+  <h3>{{subject}}</h3>
+</div>
+
+<p>Hello <strong>{{user.full_name}}</strong>,</p>
+<div style="margin: 6px 0">
+  <p>
+    We’re excited to have you get started with
+    <strong style="color: #1976d2">PORT.TOOLS</strong> service. To complete your
+    sign-up process, please enter the following OTP:
+  </p>
+  <p style="font-weight: bold; color: #1976d2">OTP: {{raw_code}}</p>
+  <p>
+    This OTP is valid for the next {{exprired}} minutes. Please do not share this OTP with
+    anyone for security reasons.
+  </p>
+  <p>If you didn't request this OTP, please ignore this message.</p>
+  <p>Welcome to <strong style="color: #1976d2">PORT.TOOLS!</strong></p>
+</div>
+<div style="margin: 5px 0">
+  <!-- Social -->
+  <p>Best regards,</p>
+  <p>The PORT.TOOLS Team</p>
+</div>
+<div style="margin-top: 20px;">
+  <div>
+    <p style="margin-bottom: 10px; text-align:center;">Let's follow us to know more information:</p>
+  </div>
+  <div style="text-align:center";>
+    <a href="#" style="display: inline-block; margin-right: 10px">
+      <img
+        src="https://port.tools/static/email/linked.png"
+      />
+    </a>
+    <a href="#" style="display: inline-block; margin-right: 10px">
+      <img
+        src="https://port.tools/static/email/twitter.png"
+      />
+    </a>
+    <a href="#" style="display: inline-block">
+      <img
+        src="https://port.tools/static/email/facebook.png"
+      />
+    </a>
+  </div>
+</div>
+{% endblock email_content %}

@@ -1,0 +1,170 @@
+{% extends "email-base-report.html" %} {% block email_content %}
+<div class="content">
+  <h2>Summary of Weekly Access Data</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Project</th>
+        <th>Farm</th>
+        <th>Monitor</th>
+        <th>
+          <p>Mon</p>
+          <h6>10th</h6>
+        </th>
+        <th>
+          <p>Tue</p>
+          <h6>11th</6>
+        </th>
+        <th>
+          <p>Wed</p>
+          <h6>12th</6>
+        </th>
+        <th>
+          <p>Thu</p>
+          <h6>13th</6>
+        </th>
+        <th>
+          <p>Fri</p>
+          <h6>13th</6>
+        </th>
+        <th>
+          <p>Sat</p>
+          <h6>14th</6>
+        </th>
+        <th>
+          <p>Sun</p>
+          <h6>15th</6>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="8">Project A</td>
+        <td rowspan="8">Farm 1</td>
+        <td>Monitor 1</td>
+        <td>
+          <p class="success-icon">5 &#10004;</p>
+          <p class="failure-icon">1 &#10006;</p>
+        </td>
+        <td>
+          <p class="success-icon">5 &#10004;</p>
+          <p class="failure-icon">1 &#10006;</p>
+        </td>
+        <td>
+          <p class="success-icon">5 &#10004;</p>
+          <p class="failure-icon">1 &#10006;</p>
+        </td>
+        <td>
+          <p class="success-icon">5 &#10004;</p>
+          <p class="failure-icon">1 &#10006;</p>
+        </td>
+        <td class="failure-icon">
+          <p class="success-icon">5 &#10004;</p>
+          <p class="failure-icon">1 &#10006;</p>
+        </td>
+        <td>
+          <p class="success-icon">5 &#10004;</p>
+          <p class="failure-icon">1 &#10006;</p>
+        </td>
+        <td>
+          <p class="success-icon">5 &#10004;</p>
+          <p class="failure-icon">1 &#10006;</p>
+        </td>
+      </tr>
+      <tr>
+        <td>Monitor 2</td>
+        <td>
+          <p class="success-icon">5 &#10004;</p>
+          <p class="failure-icon">1 &#10006;</p>
+        </td>
+        <td>
+          <p class="success-icon">5 &#10004;</p>
+          <p class="failure-icon">1 &#10006;</p>
+        </td>
+        <td>
+          <p class="success-icon">5 &#10004;</p>
+          <p class="failure-icon">1 &#10006;</p>
+        </td>
+        <td>
+          <p class="success-icon">5 &#10004;</p>
+          <p class="failure-icon">1 &#10006;</p>
+        </td>
+        <td class="failure-icon">
+          <p class="success-icon">5 &#10004;</p>
+          <p class="failure-icon">1 &#10006;</p>
+        </td>
+        <td>
+          <p class="success-icon">5 &#10004;</p>
+          <p class="failure-icon">1 &#10006;</p>
+        </td>
+        <td>
+          <p class="success-icon">5 &#10004;</p>
+          <p class="failure-icon">1 &#10006;</p>
+        </td>
+      </tr>
+      <tr>
+        <td>Monitor 3</td>
+        <td>
+          <p class="success-icon">5 &#10004;</p>
+          <p class="failure-icon">1 &#10006;</p>
+        </td>
+        <td>
+          <p class="success-icon">5 &#10004;</p>
+          <p class="failure-icon">1 &#10006;</p>
+        </td>
+        <td>
+          <p class="success-icon">5 &#10004;</p>
+          <p class="failure-icon">1 &#10006;</p>
+        </td>
+        <td>
+          <p class="success-icon">5 &#10004;</p>
+          <p class="failure-icon">1 &#10006;</p>
+        </td>
+        <td class="failure-icon">
+          <p class="success-icon">5 &#10004;</p>
+          <p class="failure-icon">1 &#10006;</p>
+        </td>
+        <td>
+          <p class="success-icon">5 &#10004;</p>
+          <p class="failure-icon">1 &#10006;</p>
+        </td>
+        <td>
+          <p class="success-icon">5 &#10004;</p>
+          <p class="failure-icon">1 &#10006;</p>
+        </td>
+      </tr>
+      <tr>
+        <td>Monitor 4</td>
+        <td>
+          <p class="success-icon">5 &#10004;</p>
+          <p class="failure-icon">1 &#10006;</p>
+        </td>
+        <td>
+          <p class="success-icon">5 &#10004;</p>
+          <p class="failure-icon">1 &#10006;</p>
+        </td>
+        <td>
+          <p class="success-icon">5 &#10004;</p>
+          <p class="failure-icon">1 &#10006;</p>
+        </td>
+        <td>
+          <p class="success-icon">5 &#10004;</p>
+          <p class="failure-icon">1 &#10006;</p>
+        </td>
+        <td class="failure-icon">
+          <p class="success-icon">5 &#10004;</p>
+          <p class="failure-icon">1 &#10006;</p>
+        </td>
+        <td>
+          <p class="success-icon">5 &#10004;</p>
+          <p class="failure-icon">1 &#10006;</p>
+        </td>
+        <td>
+          <p class="success-icon">5 &#10004;</p>
+          <p class="failure-icon">1 &#10006;</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+{% endblock email_content %}

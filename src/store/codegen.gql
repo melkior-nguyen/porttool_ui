@@ -1,0 +1,41 @@
+query {
+  userInfo {
+    __typename
+    ... on AccountObjectType {
+      id
+      lastLogin
+      username
+      mobile
+      email
+      isEmailVerified
+      isMobileVerified
+      isCompleteProfile
+      fullName
+      dob
+      gender
+      currentLat
+      currentLon
+      address {
+        id
+      }
+      twoFaViaMobile
+      twoFaViaEmail
+      setting
+      socials {
+        uid
+        provider
+        created
+        extraData
+      }
+      accountType
+    }
+    ... on OTPAccountObjectType {
+      id
+      isEmailVerified
+      isMobileVerified
+      isCompleteProfile
+      otpToken
+      accountType
+    }
+  }
+}
