@@ -12,7 +12,7 @@ function Search1() {
             display: 'flex',
             alignItems: 'center',
             backgroundColor: appColor.input.bg,
-            border: `1px solid ${appColor.text.main}`,
+            border: `1px solid ${appColor.sidebar.border}`,
             borderRadius: '6px',
             px: '10px'
         }}>

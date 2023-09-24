@@ -1,12 +1,12 @@
 import React from 'react'
 import AppBox from '../../Components/AppBox/AppBox'
-import AppContent from '../../Components/AppContent/AppContent'
+import AppTable from '../../Components/AppTable/AppTable'
 
 function Layout() {
     return (
         <AppBox>
-            <h1 style={{ color: 'green', fontSize: '16px' }}>App Content</h1>
-            <AppContent />
+            <h1 style={{ color: 'green', fontSize: '16px' }}>App Table</h1>
+            <AppTable />
         </AppBox>
     )
 }

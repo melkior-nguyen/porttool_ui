@@ -14,7 +14,7 @@ function Search2() {
             display: 'flex',
             alignItems: 'center',
             backgroundColor: appColor.input.bg,
-            border: `1px solid ${appColor.text.main}`,
+            border: `1px solid ${appColor.sidebar.border}`,
             borderRadius: '6px',
             pr: '10px'
         }}>
