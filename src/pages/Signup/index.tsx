@@ -72,6 +72,7 @@ const Signup = () => {
 
   const onShowNewPassword = () => {
     setShowNewPassword(!showNewPassword);
+    console.log('12')
   };
 
   const onDownNewPassword = (event: any) => {
