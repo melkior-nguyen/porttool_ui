@@ -22,22 +22,22 @@ function AppTableBody({ tableTitle, tableData }: any) {
                         {tableData.map((data: any, index: any) => {
                             return (
                                 <tr className={index % 2 === 0 ? "bg-transparent border-b" : "bg-slate-200 border-b"} style={{ borderColor: appColor.sidebar.border }}>
-                                    <th scope="row" className="px-6 py-4 text-xl font-medium text-gray-900 whitespace-nowra">
+                                    <th scope="row" className="px-6 py-6 text-xl font-medium text-gray-900 whitespace-nowra">
                                         {data.name}
                                     </th>
-                                    <th scope="row" className="px-6 py-4 text-xl font-medium text-gray-900 whitespace-nowra">
+                                    <th scope="row" className="px-6 py-6 text-xl font-medium text-gray-900 whitespace-nowra">
                                         {data.type}
                                     </th>
-                                    <th scope="row" className="px-6 py-4 text-xl font-medium text-gray-900 whitespace-nowra">
+                                    <th scope="row" className="px-6 py-6 text-xl font-medium text-gray-900 whitespace-nowra">
                                         {data.host}
                                     </th>
-                                    <th scope="row" className="px-6 py-4 text-xl font-medium text-green-500 whitespace-nowra">
+                                    <th scope="row" className="px-6 py-6 text-xl font-medium text-green-500 whitespace-nowra">
                                         {data.status}
                                     </th>
-                                    <th scope="row" className="px-6 py-4 text-xl font-medium text-gray-900 whitespace-nowra">
+                                    <th scope="row" className="px-6 py-6 text-xl font-medium text-gray-900 whitespace-nowra">
                                         {data.last_time}
                                     </th>
-                                    <th scope="row" className="px-6 py-4 text-xl font-medium text-blue-500 whitespace-nowra cursor-pointer underline">
+                                    <th scope="row" className="px-6 py-6 text-xl font-medium text-blue-500 whitespace-nowra cursor-pointer underline">
                                         {data.action}
                                     </th>
                                 </tr>
@@ -45,12 +45,12 @@ function AppTableBody({ tableTitle, tableData }: any) {
                         })}
                     </tbody>
                 </table>
-                <Box sx={{my: '12px'}}>
+                <Box sx={{ my: '12px' }}>
                     <Pagination count={10} color="primary" sx={{
                         "& .MuiButtonBase-root": {
                             fontSize: '12px'
                         }
-                        }}/>
+                    }} />
                 </Box>
             </div>
         </>
@@ -58,3 +58,46 @@ function AppTableBody({ tableTitle, tableData }: any) {
 }
 
 export default AppTableBody
+
+// import React, { useState } from 'react';
+// // Import các phần còn lại
+
+// function AppTableBody({ tableTitle, tableData }: any) {
+//     const [currentPage, setCurrentPage] = useState(1);
+//     const itemsPerPage = 5; // Số mục trên mỗi trang
+
+//     const handlePageChange = (event: any, newPage: number) => {
+//         setCurrentPage(newPage);
+//     };
+
+//     const startIndex = (currentPage - 1) * itemsPerPage;
+//     const endIndex = startIndex + itemsPerPage;
+//     const displayedData = tableData.slice(startIndex, endIndex);
+
+//     // Render bảng với dữ liệu đã lọc theo trang hiện tại
+//     return (
+//         <>
+//             {/*... Mã HTML cho bảng */}
+//             <tbody>
+//                 {displayedData.map((data: any, index: any) => {
+//                     return (
+//                         //... Render dòng dữ liệu
+//                     );
+//                 })}
+//             </tbody>
+//             <Pagination
+//                 count={Math.ceil(tableData.length / itemsPerPage)}
+//                 page={currentPage}
+//                 onChange={handlePageChange}
+//                 color="primary"
+//                 sx={{
+//                     "& .MuiButtonBase-root": {
+//                         fontSize: '12px'
+//                     }
+//                 }}
+//             />
+//         </>
+//     );
+// }
+
+// export default AppTableBody;

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import MainContent from './Components/MainContent/MainContent';
 import Sidebar from './Components/SideBar/SideBar';
 
+
 function App() {
   const [currContent, setCurrContent] = useState<string>('')
   return (

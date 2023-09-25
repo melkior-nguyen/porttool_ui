@@ -1,7 +1,7 @@
 import { Box } from '@mui/material'
 import React, { useState, useRef, useEffect } from 'react'
 import { AiFillCaretDown } from 'react-icons/ai'
-import { appColor } from '../../AppColor'
+import { AppShadow, appColor } from '../../AppColor'
 import './dropdown.css'
 
 function Dropdown2({ label, data }: any) {
@@ -53,6 +53,7 @@ function Dropdown2({ label, data }: any) {
             px: '10px',
             cursor: 'pointer',
             position: 'relative',
+            boxShadow: AppShadow.boxShadow
         }} >
 
             <Box sx={{ flex: '1', fontSize: '14px', userSelect: 'none', color: appColor.text.main }} onClick={handleClick}>

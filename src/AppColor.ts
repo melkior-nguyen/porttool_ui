@@ -26,3 +26,7 @@ export const appColor = {
         hover: '#403ff0'
     }
 }
+
+export const AppShadow = {
+    boxShadow: '1px 1px 1px 0px #5e5df0'
+}

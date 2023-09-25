@@ -12,6 +12,10 @@ import Search2 from '../../Components/Search/Search2'
 import Dropdown1 from '../../Components/Dropdown/Dropdown1'
 import Dropdown2 from '../../Components/Dropdown/Dropdown2'
 import Dropdown3 from '../../Components/Dropdown/Dropdown3'
+import AppList from '../../Components/AppList/AppList'
+import AppCheckBox from '../../Components/AppCheckBox/AppCheckBox'
+import AppRadio from '../../Components/AppRadio/AppRadio'
+import AppToggle from '../../Components/AppToggle/AppToggle'
 
 
 function General() {
@@ -29,6 +33,43 @@ function General() {
                 <FillBtn size='small' label='click' icon={<AiFillSetting />} />
                 <FillBtn size='medium' label='create' icon={<AiFillSetting />} />
                 <FillBtn size='large' label='setting' icon={<AiFillSetting />} />
+            </Box>
+
+            {/* List, CheckBox, Radio */}
+            <h1 style={{ color: 'green', fontSize: '16px' }}>List, CheckBox & Radio</h1>
+            <Box sx={{
+                display: 'flex',
+                alignItems: 'flex-start',
+                gap: '12px'
+            }}>
+                <Box sx={{
+                    borderRadius: '8px', p: '12px',
+                    border: '1px solid #acacac40', flex: '1',
+                    aspectRatio: '1', display: 'flex', justifyContent: 'center'
+                }}>
+                    <AppList />
+                </Box>
+                <Box sx={{
+                    borderRadius: '8px', backgroundColor: '#fff', p:'12px',
+                    border: '1px solid #acacac40', flex: '1',
+                    aspectRatio: '1', padding: '12px', height: '200px'
+                }}>
+                    <AppCheckBox />
+                </Box>
+                <Box sx={{
+                    borderRadius: '8px', backgroundColor: '#fff', p:'12px',
+                    border: '1px solid #acacac40', flex: '1', height: '200px',
+                    aspectRatio: '1'
+                }}>
+                    <AppRadio />
+                </Box>
+                <Box sx={{
+                    borderRadius: '8px', backgroundColor: '#fff', p:'12px',
+                    border: '1px solid #acacac40', flex: '1', height: '200px',
+                    aspectRatio: '1'
+                }}>
+                    <AppToggle />
+                </Box>
             </Box>
 
             {/* Input Field */}
@@ -84,16 +125,21 @@ function General() {
                     backgroundColor: '#fff',
                     width: '50%',
                     display: 'flex',
+                    flexDirection: 'column',
                     gap: '12px',
                     padding: '24px',
                     border: '1px solid #acacac40',
                     borderRadius: '8px'
                 }}>
-                    <Dropdown2 label='Country' data={data1} />
-                    <Dropdown1 label='Select Country' data={data2} />
-                    <Dropdown3 label='Select Country' data={data1} />
+                    <Box sx={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+                        <Dropdown1 label='Select Country' data={data2} />
+                        <Dropdown2 label='Country' data={data1} />
+                        <Dropdown3 label='Select Country' data={data1} />
+                    </Box>
                 </Box>
             </Box>
+
+
         </AppBox>
     )
 }
