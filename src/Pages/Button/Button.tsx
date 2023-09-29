@@ -20,7 +20,7 @@ function Button() {
                 flexDirection: 'column',
                 gap: '20px'
             }}>
-                <Box component={Paper} sx={{padding: '12px', width: '50%'}}>
+                <Box component={Paper} sx={{ padding: '12px', width: '50%' }}>
                     <span style={{ ...AppText.Sub_Title }}> Outline Button: </span>
                     <Box sx={{ display: 'flex', alignItems: 'end', gap: '12px' }}>
                         <OutlineBtn label='Small' size='small' />
@@ -30,7 +30,7 @@ function Button() {
                         <OutlineBtn label='setting' size='large' icon={<AiFillSetting />} />
                     </Box>
                 </Box>
-                <Box component={Paper} sx={{padding: '12px', width: '50%'}}>
+                <Box component={Paper} sx={{ padding: '12px', width: '50%' }}>
                     <span style={{ ...AppText.Sub_Title }}> Fill Button: </span>
                     <Box sx={{ display: 'flex', alignItems: 'end', gap: '12px' }}>
                         <FillBtn label='Small' size='small' />
@@ -40,10 +40,10 @@ function Button() {
                         <FillBtn label='Large' size='large' icon={<AiFillSetting />} />
                     </Box>
                 </Box>
-                <Box component={Paper} sx={{padding: '12px', width: '50%'}}>
-                    <span style={{ ...AppText.Sub_Title }}> Text: </span>
+                <Box component={Paper} sx={{ padding: '12px', width: '50%' }}>
+                    <span style={{ ...AppText.Sub_Title }}> Text Button: </span>
                     <Box sx={{ display: 'flex', alignItems: 'end', gap: '12px' }}>
-                        <FillBtn label='Small' size='small' />
+
                     </Box>
                 </Box>
             </Box>

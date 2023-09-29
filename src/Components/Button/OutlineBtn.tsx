@@ -63,7 +63,7 @@ function OutlineBtn({ size, label, icon }: any) {
             }
         }}>
             {size !== 'small' && icon !== undefined &&
-                <div style={{ fontSize: sizeIcon, color: AppColors.main.primary }}>
+                <div style={{ fontSize: sizeIcon }}>
                     {icon}
                 </div>
             }
