@@ -1,6 +1,6 @@
 import { Button } from '@mui/material'
 import React, { useState, useEffect } from 'react'
-import { appColor } from '../../AppColor'
+import { AppColors, appColor } from '../../AppColor'
 
 function FillBtn({ size, label, icon }: any) {
     const [sizeBtn, setSizeBtn] = useState<string[]>([])
@@ -11,11 +11,11 @@ function FillBtn({ size, label, icon }: any) {
     useEffect(() => {
         if (size === 'small') {
             // width height padding gap
-            setSizeBtn(['50px', '25px', '5px 10px', '5px'])
-            // size weight
-            setSizeText('10px')
+            setSizeBtn(['60px', '25px', '5px 10px', '5px'])
+            // size 
+            setSizeText('8px')
             //radius
-            setSizeRadius('6px')
+            setSizeRadius('20px')
             //set text
             setText(label)
         }
@@ -24,7 +24,7 @@ function FillBtn({ size, label, icon }: any) {
             setSizeText('10px')
             // size icon
             setSizeIcon('16px')
-            setSizeRadius('4px')
+            setSizeRadius('3px')
             setText(label)
         }
         if (size === 'large') {
@@ -32,7 +32,7 @@ function FillBtn({ size, label, icon }: any) {
             setSizeText('12px')
             // size icon
             setSizeIcon('20px')
-            setSizeRadius('4px')
+            setSizeRadius('3px')
             setText(label)
 
         }
@@ -42,28 +42,28 @@ function FillBtn({ size, label, icon }: any) {
         <Button variant='outlined' sx={{
             display: 'flex',
             alignItems: 'center',
-            gap: sizeBtn[3],
+            gap: size !== 'small' ? sizeBtn[3] : '0',
             minWidth: sizeBtn[0],
             height: sizeBtn[1],
-            backgroundColor: appColor.primary,
+            background: `linear-gradient(135deg, ${AppColors.main.primary_gradient} 0%, ${AppColors.main.primary} 100%)`,
             padding: sizeBtn[3],
             "&.MuiButtonBase-root": {
                 borderRadius: sizeRadius,
-                border: `1px solid ${appColor.primary}`,
+                border: `1px solid ${AppColors.main.primary}`,
                 color: `${appColor.text.white}`,
                 fontSize: sizeText
             },
             "&:hover": {
                 "&.MuiButtonBase-root": {
-                    backgroundColor: `${appColor.primary}`,
-                    color: `${appColor.text.white}`
+                    background: `linear-gradient(135deg, ${AppColors.main.primary_hover} 0%, ${AppColors.main.primary_hover} 100%)`,
+                    color: `${appColor.text.white}`,
                 }
             },
             '&:active': {
                 transform: 'scale(0.98)'
             }
         }}>
-            {size !== 'small' &&
+            {size !== 'small' && icon !== undefined &&
                 <div style={{ fontSize: sizeIcon }}>
                     {icon}
 

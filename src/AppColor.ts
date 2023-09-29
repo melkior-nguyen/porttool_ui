@@ -35,6 +35,8 @@ export const AppShadow = {
 export const AppColors = {
     main: {
         primary: '#1d39c4',
+        primary_hover: '#10239e',
+        primary_gradient: '#3957e8',
         secondary: '#030852',
         background: '#fff',
         success: '#66bb6a',

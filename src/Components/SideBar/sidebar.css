@@ -27,31 +27,12 @@
     justify-content: start;
     align-items    : center;
     gap            : 1.2rem;
-    border-right   : 6px solid transparent;
     position       : relative;
     border-radius  : 20px;
 }
 
-/* .sidebar_item::after {
-    content         : '';
-    position        : absolute;
-    top             : 0;
-    right           : 0;
-    transform       : translateX(4px);
-    height          : 100%;
-    width           : 4px;
-    background-color: #10239e;
-    border-radius   : 8px;
-    opacity         : 0;
-    transition      : all 0.1s linear;
-}
-.sidebar_item.select::after {
-    opacity  : 1;
-    transform: translateX(0);
-} */
-
 
 .sidebar_item.select {
-    color           : #fff;
-    background-color: #1d39c4;
+    color     : #fff;
+    background: linear-gradient(135deg, #3957e8 0%, #1d39c4 100%);
 }

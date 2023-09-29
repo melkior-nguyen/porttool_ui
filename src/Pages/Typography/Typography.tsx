@@ -183,7 +183,7 @@ function Typography() {
                     <Grid item xs={2}>
                         <Item>
                             <Box sx={{ backgroundColor: AppColors.sidebar.text, width: '40px', aspectRatio: '1', marginRight: '12px' }}></Box>
-                            Text1 Color
+                            Text2 Color
                         </Item>
                     </Grid>
                 </Grid>
@@ -227,7 +227,7 @@ function Typography() {
                     <Grid item xs={2}>
                         <Item>
                             <Box sx={{ backgroundColor: AppColors.text.black, width: '40px', aspectRatio: '1', marginRight: '12px' }}></Box>
-                            Text2 color
+                            Text1 color
                         </Item>
                     </Grid>
                 </Grid>

@@ -1,6 +1,6 @@
 import { Button } from '@mui/material'
 import React, { useState, useEffect } from 'react'
-import { appColor } from '../../AppColor'
+import { AppColors, appColor } from '../../AppColor'
 import { AiFillSetting } from 'react-icons/ai'
 
 function OutlineBtn({ size, label, icon }: any) {
@@ -12,28 +12,26 @@ function OutlineBtn({ size, label, icon }: any) {
     useEffect(() => {
         if (size === 'small') {
             // width height padding gap
-            setSizeBtn(['50px', '25px', '5px 10px', '5px'])
+            setSizeBtn(['60px', '25px', '5px 10px', '5px'])
             // size weight
-            setSizeText('10px')
+            setSizeText('8px')
             //radius
-            setSizeRadius('6px')
+            setSizeRadius('20px')
             //set text
             setText(label)
         }
         if (size === 'medium') {
             setSizeBtn(['80px', '30px', '5px', '5px'])
             setSizeText('10px')
-            // size icon
             setSizeIcon('16px')
-            setSizeRadius('4px')
+            setSizeRadius('3px')
             setText(label)
         }
         if (size === 'large') {
             setSizeBtn(['100px', '35px', '5px', '5px'])
             setSizeText('12px')
-            // size icon
             setSizeIcon('20px')
-            setSizeRadius('4px')
+            setSizeRadius('3px')
             setText(label)
 
         }
@@ -50,13 +48,13 @@ function OutlineBtn({ size, label, icon }: any) {
             padding: sizeBtn[3],
             "&.MuiButtonBase-root": {
                 borderRadius: sizeRadius,
-                border: `1px solid ${appColor.primary}`,
-                color: `${appColor.primary}`,
+                border: `1px solid ${AppColors.main.primary}`,
+                color: `${AppColors.main.primary}`,
                 fontSize: sizeText
             },
             "&:hover": {
                 "&.MuiButtonBase-root": {
-                    backgroundColor: `${appColor.primary}`,
+                    backgroundColor: `${AppColors.main.primary}`,
                     color: `${appColor.text.white}`
                 }
             },
@@ -64,10 +62,9 @@ function OutlineBtn({ size, label, icon }: any) {
                 transform: 'scale(0.98)'
             }
         }}>
-            {size !== 'small' &&
-                <div style={{ fontSize: sizeIcon }}>
+            {size !== 'small' && icon !== undefined &&
+                <div style={{ fontSize: sizeIcon, color: AppColors.main.primary }}>
                     {icon}
-
                 </div>
             }
             {text}

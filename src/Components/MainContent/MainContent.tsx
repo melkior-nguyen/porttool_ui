@@ -4,6 +4,7 @@ import General from '../../Pages/General/General'
 import Layout from '../../Pages/Layout/Layout'
 import Color from '../../Pages/Color/Color'
 import Typography from '../../Pages/Typography/Typography'
+import Button from '../../Pages/Button/Button'
 
 function MainContent({ currContent }: any) {
     return (
@@ -13,6 +14,9 @@ function MainContent({ currContent }: any) {
             }
             {currContent === 'typography' &&
                 <Typography />
+            }
+            {currContent === 'button' &&
+                <Button />
             }
             {currContent === 'general' &&
                 <General />

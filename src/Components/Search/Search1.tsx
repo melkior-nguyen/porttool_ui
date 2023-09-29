@@ -13,7 +13,7 @@ function Search1() {
             alignItems: 'center',
             backgroundColor: '#fff',
             border: `1px solid ${appColor.sidebar.border}`,
-            borderRadius: '6px',
+            borderRadius: '20px',
             px: '10px'
         }}>
             <Box >

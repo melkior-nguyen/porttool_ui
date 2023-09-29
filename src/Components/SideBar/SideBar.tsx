@@ -9,6 +9,7 @@ import { BsInputCursor } from 'react-icons/bs'
 import { AiOutlineForm, AiOutlineLayout, AiOutlineTable } from 'react-icons/ai'
 import { HiOutlineBadgeCheck } from 'react-icons/hi'
 import { TfiLayoutAccordionList } from 'react-icons/tfi'
+import { CgPlayButtonR } from 'react-icons/cg'
 
 function Sidebar({ setCurrContent }: any) {
     const [itemSelect, setItemSelect] = useState<string>('color')
@@ -41,6 +42,12 @@ function Sidebar({ setCurrContent }: any) {
                         <IoTextOutline style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'center' }} />
                     </Box>
                     Typography
+                </Box>
+                <Box className={itemSelect === 'button' ? 'sidebar_item select' : 'sidebar_item'} onClick={() => handleClick('button')}>
+                    <Box sx={{ width: '20px', aspectRatio: '1' }}>
+                        <CgPlayButtonR style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'center' }} />
+                    </Box>
+                    Button
                 </Box>
                 <Box className={itemSelect === 'input' ? 'sidebar_item select' : 'sidebar_item'} onClick={() => handleClick('input')}>
                     <Box sx={{ width: '20px', aspectRatio: '1' }}>

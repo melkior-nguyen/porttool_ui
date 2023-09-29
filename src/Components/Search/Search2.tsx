@@ -15,7 +15,7 @@ function Search2() {
             alignItems: 'center',
             backgroundColor: appColor.input.bg,
             border: `1px solid ${appColor.sidebar.border}`,
-            borderRadius: '6px',
+            borderRadius: '20px',
             pr: '10px',
         }}>
             <Box sx={{ minWidth: '120px' }}>
