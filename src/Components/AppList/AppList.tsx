@@ -13,7 +13,7 @@ function AppList({ title, list }: any) {
             {/* header*/}
             <Box sx={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between' }}>
                 <Typography variant='h4'>Notification</Typography>
-                <Typography variant='h5' sx={{ color: 'blue', cursor: 'pointer' }}>View all</Typography>
+                <Typography variant='h5' sx={{ color: appColor.primary, cursor: 'pointer' }}>View all</Typography>
             </Box>
             <Box sx={{
                 display: 'flex',
@@ -36,7 +36,7 @@ function AppList({ title, list }: any) {
                     borderRadius: '10px'
                 },
                 '&::-webkit-scrollbar-thumb': {
-                    backgroundColor: appColor.text.main,
+                    backgroundColor: appColor.primary,
                     borderRadius: '10px'
                 },
             }}>

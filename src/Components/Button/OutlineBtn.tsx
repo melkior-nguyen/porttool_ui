@@ -12,7 +12,7 @@ function OutlineBtn({ size, label, icon }: any) {
     useEffect(() => {
         if (size === 'small') {
             // width height padding gap
-            setSizeBtn(['40px', '25px', '5px 10px', '5px'])
+            setSizeBtn(['50px', '25px', '5px 10px', '5px'])
             // size weight
             setSizeText('10px')
             //radius
@@ -43,20 +43,20 @@ function OutlineBtn({ size, label, icon }: any) {
         <Button variant='outlined' sx={{
             display: 'flex',
             alignItems: 'center',
-            gap: sizeBtn[3],
-            width: sizeBtn[0],
+            gap: size !== 'small' ? sizeBtn[3] : '0',
+            minWidth: sizeBtn[0],
             height: sizeBtn[1],
-            backgroundColor: appColor.button.bg,
+            // backgroundColor: appColor.button.bg,
             padding: sizeBtn[3],
             "&.MuiButtonBase-root": {
                 borderRadius: sizeRadius,
-                border: `1px solid ${appColor.button.outline}`,
-                color: `${appColor.button.outline}`,
+                border: `1px solid ${appColor.primary}`,
+                color: `${appColor.primary}`,
                 fontSize: sizeText
             },
             "&:hover": {
                 "&.MuiButtonBase-root": {
-                    backgroundColor: `${appColor.button.outline}`,
+                    backgroundColor: `${appColor.primary}`,
                     color: `${appColor.text.white}`
                 }
             },
@@ -64,9 +64,12 @@ function OutlineBtn({ size, label, icon }: any) {
                 transform: 'scale(0.98)'
             }
         }}>
-            <div style={{ fontSize: sizeIcon }}>
-                {size !== 'small' && icon}
-            </div>
+            {size !== 'small' &&
+                <div style={{ fontSize: sizeIcon }}>
+                    {icon}
+
+                </div>
+            }
             {text}
         </Button>
     )

@@ -26,7 +26,7 @@ function AppTableHeader() {
                 fontSize: '16px',
                 fontWeight: '600',
                 textTransform: 'uppercase',
-                color: appColor.text.main
+                color: appColor.primary
             }}>
                 project 01
             </Box>

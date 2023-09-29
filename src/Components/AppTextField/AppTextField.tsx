@@ -16,7 +16,7 @@ const Item = styled(Paper)(({ theme }) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'flex-start',
-    gap: '12px',
+    gap: '6px',
 }));
 function AppTextField() {
     return (

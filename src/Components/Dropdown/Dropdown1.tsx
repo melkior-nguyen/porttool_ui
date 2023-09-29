@@ -68,32 +68,32 @@ function Dropdown1({ label, data }: any) {
             width: '100%',
             display: 'flex',
             alignItems: 'center',
-            backgroundColor: appColor.input.bg,
-            border: `1px solid ${appColor.text.main}`,
+            backgroundColor: '#fff',
+            border: `1px solid ${appColor.primary}`,
             borderRadius: '6px',
             p: '10px',
             position: 'relative',
-            boxShadow: AppShadow.boxShadow
+            // boxShadow: AppShadow.boxShadow
         }} >
 
             <Box sx={{
                 flex: '1', fontSize: '14px', userSelect: 'none', flexWrap: 'wrap',
-                color: appColor.text.main, display: 'flex', gap: '5px'
+                color: appColor.primary, display: 'flex', gap: '5px'
             }}>
                 {/* {count !== 0 ? `${count} Selected` : label} */}
                 {optionList.length === 0 ? label :
                     optionList.map((option: any, index: any) => {
                         return (<Box key={index} sx={{
-                            width: '65px', fontSize: '10px', display: 'flex', gap: '4px', alignItems: 'center',
-                            border: `1px solid ${appColor.button.outline}`, color: appColor.text.main,
-                            padding: '2px', borderRadius: '12px'
+                            width: '70px', fontSize: '10px', display: 'flex', gap: '4px', alignItems: 'center',
+                            border: `1px solid ${appColor.primary}`, color: appColor.primary,
+                            padding: '2px 4px', borderRadius: '12px'
                         }}>
                             <span style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', width: '45px', textAlign: 'center' }}>
                                 {option}
                             </span>
                             <Box sx={{
                                 cursor: 'pointer', borderRadius: '50%',
-                                backgroundColor: appColor.button.primary, color: appColor.text.white,
+                                backgroundColor: appColor.primary, color: appColor.text.white,
                                 width: '16px', height: '16px',
                                 display: 'flex', justifyContent: 'center', alignItems: 'center'
                             }} onClick={() => handleDelete(index)}>&times;</Box>
@@ -105,24 +105,28 @@ function Dropdown1({ label, data }: any) {
                 <Box onClick={handleDeleteAll} sx={{
                     cursor: 'pointer', mr: '5px'
                 }}>
-                    <AiOutlineDelete style={{ color: appColor.text.main, fontSize: '20px' }} />
+                    <AiOutlineDelete style={{ color: appColor.primary, fontSize: '20px' }} />
                 </Box>
             }
 
             <Box onClick={handleClick} sx={{
                 cursor: 'pointer',
             }}>
-                <AiFillCaretDown style={{ color: appColor.text.main, fontSize: '20px' }} />
+                <AiFillCaretDown style={{ color: appColor.primary, fontSize: '20px' }} />
             </Box>
 
             {/* option */}
-            <Box className={activeDropdown ? 'dropdown_options active' : 'dropdown_options'}>
+            <Box className={activeDropdown ? 'dropdown_options active' : 'dropdown_options'} sx={{
+                borderRadius: '8px',
+                overflow: 'hidden',
+                boxShadow: AppShadow.boxShadow
+            }}>
                 {data.map((item: any, index: any) => {
                     return (
                         <li key={index} className='dropdown_item'>
-                            <input style={{ cursor: 'pointer' }} type="checkbox"
+                            <input style={{ cursor: 'pointer', color: appColor.primary }} type="checkbox"
                                 onChange={() => handleCheckbox({ item })} checked={optionList.includes(item)} />
-                            <span style={{ cursor: 'pointer' }} onClick={() => handleCheckbox({ item })}>{item}</span>
+                            <span style={{ cursor: 'pointer', color: appColor.primary }} onClick={() => handleCheckbox({ item })}>{item}</span>
                         </li>
                     )
                 })}

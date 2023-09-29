@@ -11,13 +11,13 @@ function Search1() {
             height: '40px',
             display: 'flex',
             alignItems: 'center',
-            backgroundColor: appColor.input.bg,
+            backgroundColor: '#fff',
             border: `1px solid ${appColor.sidebar.border}`,
             borderRadius: '6px',
             px: '10px'
         }}>
-            <Box>
-                <FiSearch style={{ color: appColor.text.main, fontSize: '14px' }} />
+            <Box >
+                <FiSearch style={{ color: appColor.primary, fontSize: '16px' }} />
             </Box>
             <input type="text" className='block w-full p-4 text-xl text-gray-900 outline-none' />
             <FillBtn size='small' label='search' />

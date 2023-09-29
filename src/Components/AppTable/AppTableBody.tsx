@@ -46,9 +46,13 @@ function AppTableBody({ tableTitle, tableData }: any) {
                     </tbody>
                 </table>
                 <Box sx={{ my: '12px' }}>
-                    <Pagination count={10} color="primary" sx={{
+                    <Pagination count={10} sx={{
                         "& .MuiButtonBase-root": {
-                            fontSize: '12px'
+                            fontSize: '12px',
+                        },
+                        "& .MuiPaginationItem-root.Mui-selected": {
+                            backgroundColor: appColor.primary,
+                            color: '#fff'
                         }
                     }} />
                 </Box>

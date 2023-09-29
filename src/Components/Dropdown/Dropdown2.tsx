@@ -47,29 +47,33 @@ function Dropdown2({ label, data }: any) {
             height: '40px',
             display: 'flex',
             alignItems: 'center',
-            backgroundColor: appColor.input.bg,
-            border: `1px solid ${appColor.text.main}`,
+            backgroundColor: appColor.text.white,
+            border: `1px solid ${appColor.primary}`,
             borderRadius: '6px',
             px: '10px',
             cursor: 'pointer',
             position: 'relative',
-            boxShadow: AppShadow.boxShadow
+            // boxShadow: AppShadow.boxShadow
         }} >
 
-            <Box sx={{ flex: '1', fontSize: '14px', userSelect: 'none', color: appColor.text.main }} onClick={handleClick}>
+            <Box sx={{ flex: '1', fontSize: '14px', userSelect: 'none', color: appColor.primary }} onClick={handleClick}>
                 {select === 'None' ? label : select}
             </Box>
 
             <Box onClick={handleClick} >
-                <AiFillCaretDown style={{ color: appColor.text.main, fontSize: '20px' }} />
+                <AiFillCaretDown style={{ color: appColor.primary, fontSize: '20px' }} />
             </Box>
 
             {/* option */}
-            <Box className={activeDropdown ? 'dropdown_options active' : 'dropdown_options'}>
+            <Box className={activeDropdown ? 'dropdown_options active' : 'dropdown_options'} sx={{
+                borderRadius: '4px',
+                overflow: 'hidden',
+                boxShadow: '1px 1px 1px 0 #acacac40',
+            }}>
                 {data.map((item: any, index: any) => {
                     return (
-                        <li key={index} className='dropdown_item'>
-                            <span style={{ cursor: 'default' }} onClick={() => handleSelect(item)}>{item}</span>
+                        <li key={index} className='dropdown_item' >
+                            <span style={{ color: appColor.primary }} onClick={() => handleSelect(item)}>{item}</span>
                         </li>
                     )
                 })}

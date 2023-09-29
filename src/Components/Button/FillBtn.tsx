@@ -11,7 +11,7 @@ function FillBtn({ size, label, icon }: any) {
     useEffect(() => {
         if (size === 'small') {
             // width height padding gap
-            setSizeBtn(['40px', '25px', '5px 10px', '5px'])
+            setSizeBtn(['50px', '25px', '5px 10px', '5px'])
             // size weight
             setSizeText('10px')
             //radius
@@ -43,19 +43,19 @@ function FillBtn({ size, label, icon }: any) {
             display: 'flex',
             alignItems: 'center',
             gap: sizeBtn[3],
-            width: sizeBtn[0],
+            minWidth: sizeBtn[0],
             height: sizeBtn[1],
-            backgroundColor: appColor.button.primary,
+            backgroundColor: appColor.primary,
             padding: sizeBtn[3],
             "&.MuiButtonBase-root": {
                 borderRadius: sizeRadius,
-                border: `1px solid ${appColor.button.outline}`,
+                border: `1px solid ${appColor.primary}`,
                 color: `${appColor.text.white}`,
                 fontSize: sizeText
             },
             "&:hover": {
                 "&.MuiButtonBase-root": {
-                    backgroundColor: `${appColor.button.hover}`,
+                    backgroundColor: `${appColor.primary}`,
                     color: `${appColor.text.white}`
                 }
             },
@@ -63,9 +63,12 @@ function FillBtn({ size, label, icon }: any) {
                 transform: 'scale(0.98)'
             }
         }}>
-            <div style={{ fontSize: sizeIcon }}>
-                {size !== 'small' && icon}
-            </div>
+            {size !== 'small' &&
+                <div style={{ fontSize: sizeIcon }}>
+                    {icon}
+
+                </div>
+            }
             {text}
         </Button>
     )

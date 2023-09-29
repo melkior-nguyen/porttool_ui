@@ -1,7 +1,7 @@
 import { Box } from '@mui/material'
 import React, { useState, useRef, useEffect } from 'react'
 import { AiFillCaretDown } from 'react-icons/ai'
-import { appColor } from '../../AppColor'
+import { AppShadow, appColor } from '../../AppColor'
 import './dropdown.css'
 
 function Dropdown3({ label, data }: any) {
@@ -46,8 +46,8 @@ function Dropdown3({ label, data }: any) {
             height: '40px',
             display: 'flex',
             alignItems: 'center',
-            backgroundColor: appColor.text.main,
-            border: `1px solid ${appColor.text.main}`,
+            backgroundColor: appColor.primary,
+            border: `1px solid ${appColor.primary}`,
             borderRadius: '6px',
             px: '10px',
             cursor: 'pointer',
@@ -63,11 +63,15 @@ function Dropdown3({ label, data }: any) {
             </Box>
 
             {/* option */}
-            <Box className={activeDropdown ? 'dropdown_options active' : 'dropdown_options'}>
+            <Box className={activeDropdown ? 'dropdown_options active' : 'dropdown_options'} sx={{
+                borderRadius: '8px',
+                overflow: 'hidden',
+                boxShadow: AppShadow.boxShadow
+            }}>
                 {data.map((item: any, index: any) => {
                     return (
                         <li key={index} className='dropdown_item'>
-                            <span style={{ cursor: 'default' }} onClick={() => handleSelect(item)}>{item}</span>
+                            <span style={{ cursor: 'default', color: appColor.primary }} onClick={() => handleSelect(item)}>{item}</span>
                         </li>
                     )
                 })}
