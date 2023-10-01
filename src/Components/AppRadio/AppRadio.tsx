@@ -1,5 +1,6 @@
 import { Box, Radio } from '@mui/material'
 import React from 'react'
+import { AppColors } from '../../AppColor';
 
 function AppRadio() {
   const [selectedValue, setSelectedValue] = React.useState('a');
@@ -16,81 +17,43 @@ function AppRadio() {
   });
   return (
     <>
-      <Box>
-        <Radio {...controlProps('a')} sx={{
-          color: 'red',
-          '& .MuiSvgIcon-root': {
-            fontSize: 12,
-          },
-          '&.Mui-checked': {
-            color: 'red',
-          },
-        }} />
-        <Radio {...controlProps('b')} sx={{
-          color: 'red',
-          '& .MuiSvgIcon-root': {
-            fontSize: 20,
-          },
-          '&.Mui-checked': {
-            color: 'red',
-          },
-        }} />
-        <Radio {...controlProps('c')} sx={{
-          color: 'red',
-          '& .MuiSvgIcon-root': {
-            fontSize: 28,
-          },
-          '&.Mui-checked': {
-            color: 'red',
-          },
-        }}
-        />
-      </Box>
-
-      <Box>
-        <Radio {...controlProps('d')} sx={{
-          '& .MuiSvgIcon-root': {
-            fontSize: 28,
-          },
-        }} />
-        <Radio {...controlProps('e')} sx={{
-          color: '#ce93d8',
-          '& .MuiSvgIcon-root': {
-            fontSize: 28,
-          },
-          '&.Mui-checked': {
-            color: '#ce93d8',
-          },
-        }} />
-        <Radio {...controlProps('f')} sx={{
-          color: '#66bb6a',
-          '& .MuiSvgIcon-root': {
-            fontSize: 28,
-          },
-          '&.Mui-checked': {
-            color: '#66bb6a',
-          },
-        }} />
-        <Radio {...controlProps('g')} sx={{
-          color: '#b8b9ba',
-          '& .MuiSvgIcon-root': {
-            fontSize: 28,
-          },
-          '&.Mui-checked': {
-            color: '#b8b9ba',
-          },
-        }} />
-        <Radio {...controlProps('h')} sx={{
-          color: 'pink',
-          '& .MuiSvgIcon-root': {
-            fontSize: 28,
-          },
-          '&.Mui-checked': {
-            color: 'pink',
-          },
-        }}
-        />
-      </Box>
+      <Radio {...controlProps('e')} sx={{
+        color: AppColors.main.info,
+        '& .MuiSvgIcon-root': {
+          fontSize: 28,
+        },
+        '&.Mui-checked': {
+          color: AppColors.main.info,
+        },
+      }} />
+      <Radio {...controlProps('f')} sx={{
+        color: AppColors.main.info,
+        '& .MuiSvgIcon-root': {
+          fontSize: 28,
+        },
+        '&.Mui-checked': {
+          color: AppColors.main.info,
+        },
+      }} />
+      <Radio {...controlProps('g')} sx={{
+        color: AppColors.main.info,
+        '& .MuiSvgIcon-root': {
+          fontSize: 28,
+        },
+        '&.Mui-checked': {
+          color: AppColors.main.info,
+        },
+      }} />
+      <Radio {...controlProps('h')} sx={{
+        color: AppColors.main.info,
+        '& .MuiSvgIcon-root': {
+          fontSize: 28,
+        },
+        '&.Mui-checked': {
+          color: AppColors.main.info,
+        },
+      }}
+      />
     </>
   )
 }

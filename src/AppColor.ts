@@ -45,7 +45,7 @@ export const AppColors = {
         error: '#f44336'
     },
     sidebar: {
-        background: '#fffbff',
+        background: '#f7faff',
         text: '#8294b1',
         selected: '#7e7d88'
     },

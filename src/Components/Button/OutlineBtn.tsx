@@ -12,7 +12,7 @@ function OutlineBtn({ size, label, icon }: any) {
     useEffect(() => {
         if (size === 'small') {
             // width height padding gap
-            setSizeBtn(['60px', '25px', '5px 10px', '5px'])
+            setSizeBtn(['60px', '30px', '5px 10px', '5px'])
             // size weight
             setSizeText('8px')
             //radius
@@ -21,14 +21,14 @@ function OutlineBtn({ size, label, icon }: any) {
             setText(label)
         }
         if (size === 'medium') {
-            setSizeBtn(['80px', '30px', '5px', '5px'])
+            setSizeBtn(['100px', '30px', '5px', '10px'])
             setSizeText('10px')
             setSizeIcon('16px')
             setSizeRadius('3px')
             setText(label)
         }
         if (size === 'large') {
-            setSizeBtn(['100px', '35px', '5px', '5px'])
+            setSizeBtn(['120px', '35px', '5px', '12px'])
             setSizeText('12px')
             setSizeIcon('20px')
             setSizeRadius('3px')
@@ -43,7 +43,8 @@ function OutlineBtn({ size, label, icon }: any) {
             alignItems: 'center',
             gap: size !== 'small' ? sizeBtn[3] : '0',
             minWidth: sizeBtn[0],
-            height: sizeBtn[1],
+            maxHeight: sizeBtn[1],
+            height: '100%',
             // backgroundColor: appColor.button.bg,
             padding: sizeBtn[3],
             "&.MuiButtonBase-root": {

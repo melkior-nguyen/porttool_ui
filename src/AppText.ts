@@ -1,16 +1,22 @@
 import { AppColors } from "./AppColor";
 
 export const AppText = {
-    Heading_Title: {
-        fontSize: '24px',
-        lineHeight: '36px',
-        fontWeight: '700',
-        color: AppColors.main.primary
-    },
-    Sub_Title: {
+    // Heading_Title: {
+    //     fontSize: '24px',
+    //     lineHeight: '36px',
+    //     fontWeight: '600',
+    //     color: AppColors.main.primary
+    // },
+    Main_Title: {
         fontSize: '20px',
         lineHeight: '30px',
-        fontWeight: '700',
+        fontWeight: '600',
+        color: AppColors.main.secondary
+    },
+    Sub_Title: {
+        fontSize: '16px',
+        lineHeight: '24px',
+        fontWeight: '600',
         color: AppColors.main.secondary
     },
     Body_Text: {
@@ -20,7 +26,7 @@ export const AppText = {
         color: AppColors.sidebar.text
     },
     List_Title: {
-        fontSize: '16px',
+        fontSize: '14px',
         lineHeight: '24px',
         fontWeight: '600',
         color: AppColors.text.black
@@ -28,7 +34,13 @@ export const AppText = {
     Input_Label: {
         fontSize: '16px',
         lineHeight: '24px',
-        fontWeight: '400',
+        fontWeight: '300',
+        color: AppColors.main.primary
+    },
+    Caption: {
+        fontSize: '14px',
+        lineHeight: '24px',
+        fontWeight: '200',
         color: AppColors.main.primary
     }
 }

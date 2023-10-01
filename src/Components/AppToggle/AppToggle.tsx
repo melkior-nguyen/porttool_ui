@@ -16,8 +16,8 @@ function AppToggle({ label, labelColor, toggleColor }: any) {
                 after:h-6 after:w-6 after:transition-all peer peer-checked:after:translate-x-full 
                 peer-checked:after:border-white `} style={{ backgroundColor: isChecked ? `${toggleColor}` : '' }} >
                 </div>
-                <span className={`ml-3 text-xl font-medium ${labelColor}`}>{label}</span>
-            </label>
+                <span className='ml-3 text-xl font-medium' style={{ color: labelColor }}>{label}</span>
+            </label >
         </>
     )
 }

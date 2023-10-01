@@ -7,9 +7,10 @@ import { BiSolidColor } from 'react-icons/bi'
 import { IoTextOutline } from 'react-icons/io5'
 import { BsInputCursor } from 'react-icons/bs'
 import { AiOutlineForm, AiOutlineLayout, AiOutlineTable } from 'react-icons/ai'
-import { HiOutlineBadgeCheck } from 'react-icons/hi'
+import { HiOutlineBadgeCheck, HiOutlineSearchCircle } from 'react-icons/hi'
 import { TfiLayoutAccordionList } from 'react-icons/tfi'
 import { CgPlayButtonR } from 'react-icons/cg'
+import { RxDropdownMenu } from 'react-icons/rx'
 
 function Sidebar({ setCurrContent }: any) {
     const [itemSelect, setItemSelect] = useState<string>('color')
@@ -49,6 +50,24 @@ function Sidebar({ setCurrContent }: any) {
                     </Box>
                     Button
                 </Box>
+                <Box className={itemSelect === 'search' ? 'sidebar_item select' : 'sidebar_item'} onClick={() => handleClick('search')}>
+                    <Box sx={{ width: '20px', aspectRatio: '1' }}>
+                        <HiOutlineSearchCircle style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'center' }} />
+                    </Box>
+                    Search
+                </Box>
+                <Box className={itemSelect === 'dropdown' ? 'sidebar_item select' : 'sidebar_item'} onClick={() => handleClick('dropdown')}>
+                    <Box sx={{ width: '20px', aspectRatio: '1' }}>
+                        <RxDropdownMenu style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'center' }} />
+                    </Box>
+                    Dropdown
+                </Box>
+                <Box className={itemSelect === 'badge' ? 'sidebar_item select' : 'sidebar_item'} onClick={() => handleClick('badge')}>
+                    <Box sx={{ width: '20px', aspectRatio: '1' }}>
+                        <HiOutlineBadgeCheck style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'center' }} />
+                    </Box>
+                    Badge
+                </Box>
                 <Box className={itemSelect === 'input' ? 'sidebar_item select' : 'sidebar_item'} onClick={() => handleClick('input')}>
                     <Box sx={{ width: '20px', aspectRatio: '1' }}>
                         <BsInputCursor style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'center' }} />
@@ -61,12 +80,7 @@ function Sidebar({ setCurrContent }: any) {
                     </Box>
                     Form
                 </Box>
-                <Box className={itemSelect === 'badge' ? 'sidebar_item select' : 'sidebar_item'} onClick={() => handleClick('badge')}>
-                    <Box sx={{ width: '20px', aspectRatio: '1' }}>
-                        <HiOutlineBadgeCheck style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'center' }} />
-                    </Box>
-                    Badge
-                </Box>
+
                 <Box className={itemSelect === 'table' ? 'sidebar_item select' : 'sidebar_item'} onClick={() => handleClick('table')}>
                     <Box sx={{ width: '20px', aspectRatio: '1' }}>
                         <AiOutlineTable style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'center' }} />
@@ -78,12 +92,6 @@ function Sidebar({ setCurrContent }: any) {
                         <TfiLayoutAccordionList style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'center' }} />
                     </Box>
                     Accordion
-                </Box>
-                <Box className={itemSelect === 'general' ? 'sidebar_item select' : 'sidebar_item'} onClick={() => handleClick('general')}>
-                    <Box sx={{ width: '20px', aspectRatio: '1' }}>
-                        <LuLayoutDashboard style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'center' }} />
-                    </Box>
-                    General
                 </Box>
                 <Box className={itemSelect === 'layout' ? 'sidebar_item select' : 'sidebar_item'} onClick={() => handleClick('layout')}>
                     <Box sx={{ width: '20px', aspectRatio: '1' }}>

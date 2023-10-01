@@ -9,7 +9,6 @@ function MainContentHeader({ children }: any) {
             lineHeight: '36px',
             fontWeight: '700',
             color: AppColors.main.primary,
-            marginBottom: '16px'
         }}>
             {children}
         </Typography>

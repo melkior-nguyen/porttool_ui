@@ -1,28 +1,33 @@
 import React from 'react'
 import { FiSearch } from 'react-icons/fi'
-import { AppShadow, appColor } from '../../AppColor'
+import { AppColors, appColor } from '../../AppColor'
 import { Box } from '@mui/material'
 import FillBtn from '../Button/FillBtn'
-import Dropdown3 from '../Dropdown/Dropdown3'
+import IconWrapper from '../IconWrapper/IconWrapper'
+import { AppText } from '../../AppText'
 
 function Search2() {
-    const data = ['None', 'Typescript', 'NextJs', 'Javascript']
     return (
         <Box sx={{
             width: '100%',
             height: '40px',
             display: 'flex',
             alignItems: 'center',
-            backgroundColor: appColor.input.bg,
-            border: `1px solid ${appColor.sidebar.border}`,
+            justifyContent: 'space-between',
+            backgroundColor: '#fff',
+            border: `1px solid ${AppColors.sidebar.text}`,
             borderRadius: '20px',
-            pr: '10px',
+            p: '5px 5px 5px 10px',
+            gap: '10px'
         }}>
-            <Box sx={{ minWidth: '120px' }}>
-                <Dropdown3 label='Language' data={data} style={{ backgroundColor: 'red' }} />
+            <Box sx={{ width: '20px' }}>
+                <IconWrapper widthIcon='20px' iconColor={AppColors.main.primary}>
+                    <FiSearch />
+                </IconWrapper>
             </Box>
-            <input type="text" className='block w-full p-4 text-xl text-gray-900 outline-none' />
-            <FillBtn size='small' label='search' />
+            <input type="text" className='block w-full text-xl text-gray-900 outline-none'
+                placeholder='Search...' style={{ color: AppText.Body_Text.color }} />
+            <FillBtn size='small' label='Search' />
         </Box>
     )
 }

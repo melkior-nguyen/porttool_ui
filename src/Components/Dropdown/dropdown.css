@@ -6,7 +6,7 @@
     background-color: #fff;
     width           : 100%;
     min-height      : max-content;
-    max-height      : 140px;
+    max-height      : 150px;
     border          : 1px solid #e1ecf4;
     flex-direction  : column;
     gap             : 5px;
@@ -35,10 +35,10 @@
 }
 
 .dropdown_item input[type='checkbox'] {
-    accent-color: blue;
+    accent-color: #1d39c4;
 }
 
 .dropdown_item span {
     width: 100%;
-    color: #403ff0
+    color: #1d39c4
 }

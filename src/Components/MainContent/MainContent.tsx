@@ -1,10 +1,13 @@
 import React from 'react'
 import './maincontent.css'
-import General from '../../Pages/General/General'
-import Layout from '../../Pages/Layout/Layout'
-import Color from '../../Pages/Color/Color'
-import Typography from '../../Pages/Typography/Typography'
-import Button from '../../Pages/Button/Button'
+import Layout from '../../Pages/Layout'
+import Color from '../../Pages/Color'
+import Typography from '../../Pages/Typography'
+import Button from '../../Pages/Button'
+import Search from '../../Pages/Search'
+import Dropdown from '../../Pages/Dropdown'
+import Badge from '../../Pages/Badge'
+import Input from '../../Pages/Input'
 
 function MainContent({ currContent }: any) {
     return (
@@ -18,8 +21,17 @@ function MainContent({ currContent }: any) {
             {currContent === 'button' &&
                 <Button />
             }
-            {currContent === 'general' &&
-                <General />
+            {currContent === 'search' &&
+                <Search />
+            }
+            {currContent === 'dropdown' &&
+                <Dropdown />
+            }
+            {currContent === 'badge' &&
+                <Badge />
+            }
+            {currContent === 'input' &&
+                <Input />
             }
             {currContent === 'layout' &&
                 <Layout />

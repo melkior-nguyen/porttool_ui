@@ -9,6 +9,7 @@ import { BsTelephone } from 'react-icons/bs';
 import { MdOutlineMail } from 'react-icons/md';
 import AppInputError from '../AppInput/AppInputError';
 import AppInputSuccess from '../AppInput/AppInputSuccess';
+import AppInputWarning from '../AppInput/AppInputWarning';
 
 
 
@@ -25,12 +26,17 @@ function AppTextField2() {
         <Grid container spacing={2}>
             <Grid item xs={6} md={12}>
                 <Item>
-                    <AppInputSuccess label={'Your name'} placeholder={'Success input'} type={'password'} icon={<PiPasswordLight />} />
+                    <AppInputSuccess label={''} placeholder={''} type={'password'} />
                 </Item>
             </Grid>
             <Grid item xs={6} md={12}>
                 <Item>
-                    <AppInputError label={'Password'} placeholder={'Error input'} type={'text'} icon={<AiOutlineUser />} />
+                    <AppInputWarning label={''} placeholder={''} type={'text'}  />
+                </Item>
+            </Grid>
+            <Grid item xs={6} md={12}>
+                <Item>
+                    <AppInputError label={''} placeholder={''} type={'text'}  />
                 </Item>
             </Grid>
         </Grid>

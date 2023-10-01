@@ -1,11 +1,12 @@
 import { Box } from '@mui/material'
 import React, { useState, useRef, useEffect } from 'react'
 import { AiFillCaretDown } from 'react-icons/ai'
-import { AppColors, AppShadow } from '../../AppColor'
+import { AppColors, AppShadow, appColor } from '../../AppColor'
 import './dropdown.css'
 import { AppText } from '../../AppText'
+import IconWrapper from '../IconWrapper/IconWrapper'
 
-function Dropdown2({ label, data }: any) {
+function Dropdown4({ label, data }: any) {
     const [activeDropdown, setActiveDropdown] = useState<boolean>(false)
     const [select, setSelect] = useState<string>(label)
 
@@ -49,32 +50,35 @@ function Dropdown2({ label, data }: any) {
             display: 'flex',
             alignItems: 'center',
             backgroundColor: AppColors.text.white,
-            border: `1px solid ${AppText.Body_Text.color}`,
-            borderRadius: '4px',
-            p: '10px',
+            borderRight: `1px solid ${AppColors.sidebar.text}`,
+            px: '10px',
             cursor: 'pointer',
             position: 'relative',
             // boxShadow: AppShadow.boxShadow
         }} >
 
-            <Box sx={{ flex: '1', fontSize: '14px', userSelect: 'none', color: AppColors.main.primary }} onClick={handleClick}>
+            <Box sx={{ flex: '1', fontSize: '14px', userSelect: 'none', color: AppText.Body_Text.color }} onClick={handleClick}>
                 {select === 'None' ? label : select}
             </Box>
 
             <Box onClick={handleClick} >
-                <AiFillCaretDown style={{ color: AppColors.main.primary, fontSize: '20px' }} />
+                <Box sx={{ width: '20px' }}>
+                    <IconWrapper widthIcon='20px' iconColor={AppColors.main.primary}>
+                        <AiFillCaretDown />
+                    </IconWrapper>
+                </Box>
             </Box>
 
             {/* option */}
             <Box className={activeDropdown ? 'dropdown_options active' : 'dropdown_options'} sx={{
                 borderRadius: '4px',
-                overflow: 'auto', padding: '6px 0',
+                overflow: 'hidden',
                 boxShadow: '1px 1px 1px 0 #acacac40',
             }}>
                 {data.map((item: any, index: any) => {
                     return (
                         <li key={index} className='dropdown_item' >
-                            <span style={{ color: AppColors.main.primary }} onClick={() => handleSelect(item)}>{item}</span>
+                            <span style={{ color: AppText.Body_Text.color }} onClick={() => handleSelect(item)}>{item}</span>
                         </li>
                     )
                 })}
@@ -83,4 +87,4 @@ function Dropdown2({ label, data }: any) {
     )
 }
 
-export default Dropdown2
+export default Dropdown4

@@ -6,6 +6,7 @@ import styled from '@emotion/styled';
 import { AppColors } from '../../AppColor';
 import { AppText } from '../../AppText';
 import AppInput from '../../Components/AppInput/AppInput';
+import { AiOutlineUser } from 'react-icons/ai';
 
 const Item = styled(Paper)(() => ({
     backgroundColor: '#fff',
@@ -21,18 +22,14 @@ const Item = styled(Paper)(() => ({
 function Typography() {
     return (
         <AppBox>
-            <MainContentHeader>
-                Typography
-            </MainContentHeader>
             <Box sx={{
-                padding: '24px',
                 display: 'flex',
                 flexDirection: 'column',
                 gap: '20px'
             }}>
                 <Grid container spacing={2}>
                     <Grid item xs={5}>
-                        <Box sx={{ ...AppText.Sub_Title }}></Box>
+                        <Box sx={{ ...AppText.Sub_Title }}>Example</Box>
                     </Grid>
                     <Grid item xs={2}>
                         <Box sx={{ ...AppText.Sub_Title }}>Type:</Box>
@@ -45,7 +42,7 @@ function Typography() {
                     </Grid>
                 </Grid>
                 {/* Heading Title */}
-                <Grid container spacing={2} >
+                {/* <Grid container spacing={2} >
                     <Grid item xs={5}>
                         <Item >
                             <span style={{ ...AppText.Heading_Title }}>
@@ -60,15 +57,15 @@ function Typography() {
                         <Item sx={{ flexDirection: 'column', justifyContent: 'center' }}>
                             <p style={{ display: 'flex', width: '100%' }}>
                                 Font Size
-                                <p style={{ width: '50%', marginLeft: 'auto' }}>24px</p>
+                                <p style={{ width: '55%', marginLeft: 'auto' }}>24px</p>
                             </p>
                             <p style={{ display: 'flex', width: '100%' }}>
                                 Line Height
-                                <p style={{ width: '50%', marginLeft: 'auto' }}>36px</p>
+                                <p style={{ width: '55%', marginLeft: 'auto' }}>36px</p>
                             </p>
                             <p style={{ display: 'flex', width: '100%' }}>
                                 Font Weight
-                                <p style={{ width: '50%', marginLeft: 'auto' }}>700</p>
+                                <p style={{ width: '55%', marginLeft: 'auto' }}>700</p>
                             </p>
                         </Item>
                     </Grid>
@@ -78,9 +75,45 @@ function Typography() {
                             Primary
                         </Item>
                     </Grid>
+                </Grid> */}
+
+                {/* main Title */}
+                <Grid container spacing={2}>
+                    <Grid item xs={5}>
+                        <Item >
+                            <span style={{ ...AppText.Main_Title }}>
+                                Two Factor Authentication
+                            </span>
+                        </Item>
+                    </Grid>
+                    <Grid item xs={2}>
+                        <Item>Main Title</Item>
+                    </Grid>
+                    <Grid item xs={3}>
+                        <Item sx={{ flexDirection: 'column', justifyContent: 'center' }}>
+                            <p style={{ display: 'flex', width: '100%' }}>
+                                Font Size
+                                <p style={{ width: '55%', marginLeft: 'auto' }}>20px</p>
+                            </p>
+                            <p style={{ display: 'flex', width: '100%' }}>
+                                Line Height
+                                <p style={{ width: '55%', marginLeft: 'auto' }}>30px</p>
+                            </p>
+                            <p style={{ display: 'flex', width: '100%' }}>
+                                Font Weight
+                                <p style={{ width: '55%', marginLeft: 'auto' }}>600</p>
+                            </p>
+                        </Item>
+                    </Grid>
+                    <Grid item xs={2}>
+                        <Item>
+                            <Box sx={{ backgroundColor: AppColors.main.secondary, width: '40px', aspectRatio: '1', marginRight: '12px' }}></Box>
+                            Secondary
+                        </Item>
+                    </Grid>
                 </Grid>
 
-                {/* Sub Title */}
+                {/* sub Title */}
                 <Grid container spacing={2}>
                     <Grid item xs={5}>
                         <Item >
@@ -96,15 +129,15 @@ function Typography() {
                         <Item sx={{ flexDirection: 'column', justifyContent: 'center' }}>
                             <p style={{ display: 'flex', width: '100%' }}>
                                 Font Size
-                                <p style={{ width: '50%', marginLeft: 'auto' }}>20px</p>
+                                <p style={{ width: '55%', marginLeft: 'auto' }}>16px</p>
                             </p>
                             <p style={{ display: 'flex', width: '100%' }}>
                                 Line Height
-                                <p style={{ width: '50%', marginLeft: 'auto' }}>30px</p>
+                                <p style={{ width: '55%', marginLeft: 'auto' }}>24px</p>
                             </p>
                             <p style={{ display: 'flex', width: '100%' }}>
                                 Font Weight
-                                <p style={{ width: '50%', marginLeft: 'auto' }}>700</p>
+                                <p style={{ width: '55%', marginLeft: 'auto' }}>600</p>
                             </p>
                         </Item>
                     </Grid>
@@ -112,42 +145,6 @@ function Typography() {
                         <Item>
                             <Box sx={{ backgroundColor: AppColors.main.secondary, width: '40px', aspectRatio: '1', marginRight: '12px' }}></Box>
                             Secondary
-                        </Item>
-                    </Grid>
-                </Grid>
-
-                {/* Input Label */}
-                <Grid container spacing={2}>
-                    <Grid item xs={5}>
-                        <Item >
-                            <Box sx={{ flexDirection: 'column', width: '50%' }}>
-                                <AppInput label='Username' placeholder='' type='text' />
-                            </Box>
-                        </Item>
-                    </Grid>
-                    <Grid item xs={2}>
-                        <Item>Input Label</Item>
-                    </Grid>
-                    <Grid item xs={3}>
-                        <Item sx={{ flexDirection: 'column', justifyContent: 'center' }}>
-                            <p style={{ display: 'flex', width: '100%' }}>
-                                Font Size
-                                <p style={{ width: '50%', marginLeft: 'auto' }}>16px</p>
-                            </p>
-                            <p style={{ display: 'flex', width: '100%' }}>
-                                Line Height
-                                <p style={{ width: '50%', marginLeft: 'auto' }}>24px</p>
-                            </p>
-                            <p style={{ display: 'flex', width: '100%' }}>
-                                Font Weight
-                                <p style={{ width: '50%', marginLeft: 'auto' }}>600</p>
-                            </p>
-                        </Item>
-                    </Grid>
-                    <Grid item xs={2}>
-                        <Item>
-                            <Box sx={{ backgroundColor: AppColors.main.primary, width: '40px', aspectRatio: '1', marginRight: '12px' }}></Box>
-                            Primary
                         </Item>
                     </Grid>
                 </Grid>
@@ -168,22 +165,22 @@ function Typography() {
                         <Item sx={{ flexDirection: 'column', justifyContent: 'center' }}>
                             <p style={{ display: 'flex', width: '100%' }}>
                                 Font Size
-                                <p style={{ width: '50%', marginLeft: 'auto' }}>14px (Sidebar: 16px)</p>
+                                <p style={{ width: '55%', marginLeft: 'auto' }}>14px</p>
                             </p>
                             <p style={{ display: 'flex', width: '100%' }}>
                                 Line Height
-                                <p style={{ width: '50%', marginLeft: 'auto' }}>24px</p>
+                                <p style={{ width: '55%', marginLeft: 'auto' }}>24px</p>
                             </p>
                             <p style={{ display: 'flex', width: '100%' }}>
                                 Font Weight
-                                <p style={{ width: '50%', marginLeft: 'auto' }}>400</p>
+                                <p style={{ width: '55%', marginLeft: 'auto' }}>400</p>
                             </p>
                         </Item>
                     </Grid>
                     <Grid item xs={2}>
                         <Item>
                             <Box sx={{ backgroundColor: AppColors.sidebar.text, width: '40px', aspectRatio: '1', marginRight: '12px' }}></Box>
-                            Text2 Color
+                            Text2
                         </Item>
                     </Grid>
                 </Grid>
@@ -212,22 +209,94 @@ function Typography() {
                         <Item sx={{ flexDirection: 'column', justifyContent: 'center' }}>
                             <p style={{ display: 'flex', width: '100%' }}>
                                 Font Size
-                                <p style={{ width: '50%', marginLeft: 'auto' }}>16px</p>
+                                <p style={{ width: '55%', marginLeft: 'auto' }}>14px</p>
                             </p>
                             <p style={{ display: 'flex', width: '100%' }}>
                                 Line Height
-                                <p style={{ width: '50%', marginLeft: 'auto' }}>24px</p>
+                                <p style={{ width: '55%', marginLeft: 'auto' }}>24px</p>
                             </p>
                             <p style={{ display: 'flex', width: '100%' }}>
                                 Font Weight
-                                <p style={{ width: '50%', marginLeft: 'auto' }}>600</p>
+                                <p style={{ width: '55%', marginLeft: 'auto' }}>600</p>
                             </p>
                         </Item>
                     </Grid>
                     <Grid item xs={2}>
                         <Item>
                             <Box sx={{ backgroundColor: AppColors.text.black, width: '40px', aspectRatio: '1', marginRight: '12px' }}></Box>
-                            Text1 color
+                            Text1
+                        </Item>
+                    </Grid>
+                </Grid>
+
+                {/* Input Label */}
+                <Grid container spacing={2}>
+                    <Grid item xs={5}>
+                        <Item >
+                            <Box sx={{ flexDirection: 'column', width: '55%' }}>
+                                <AppInput label='Username' placeholder='' type='text' icon={<AiOutlineUser />} />
+                            </Box>
+                        </Item>
+                    </Grid>
+                    <Grid item xs={2}>
+                        <Item>Input Label</Item>
+                    </Grid>
+                    <Grid item xs={3}>
+                        <Item sx={{ flexDirection: 'column', justifyContent: 'center' }}>
+                            <p style={{ display: 'flex', width: '100%' }}>
+                                Font Size
+                                <p style={{ width: '55%', marginLeft: 'auto' }}>16px</p>
+                            </p>
+                            <p style={{ display: 'flex', width: '100%' }}>
+                                Line Height
+                                <p style={{ width: '55%', marginLeft: 'auto' }}>24px</p>
+                            </p>
+                            <p style={{ display: 'flex', width: '100%' }}>
+                                Font Weight
+                                <p style={{ width: '55%', marginLeft: 'auto' }}>300</p>
+                            </p>
+                        </Item>
+                    </Grid>
+                    <Grid item xs={2}>
+                        <Item>
+                            <Box sx={{ backgroundColor: AppColors.main.primary, width: '40px', aspectRatio: '1', marginRight: '12px' }}></Box>
+                            Primary
+                        </Item>
+                    </Grid>
+                </Grid>
+
+                {/* Caption */}
+                <Grid container spacing={2}>
+                    <Grid item xs={5}>
+                        <Item >
+                            <span style={{ ...AppText.Caption }}>
+                                Forgot your password?
+                            </span>
+                        </Item>
+                    </Grid>
+                    <Grid item xs={2}>
+                        <Item>Caption</Item>
+                    </Grid>
+                    <Grid item xs={3}>
+                        <Item sx={{ flexDirection: 'column', justifyContent: 'center' }}>
+                            <p style={{ display: 'flex', width: '100%' }}>
+                                Font Size
+                                <p style={{ width: '55%', marginLeft: 'auto' }}>14px</p>
+                            </p>
+                            <p style={{ display: 'flex', width: '100%' }}>
+                                Line Height
+                                <p style={{ width: '55%', marginLeft: 'auto' }}>24px</p>
+                            </p>
+                            <p style={{ display: 'flex', width: '100%' }}>
+                                Font Weight
+                                <p style={{ width: '55%', marginLeft: 'auto' }}>200</p>
+                            </p>
+                        </Item>
+                    </Grid>
+                    <Grid item xs={2}>
+                        <Item>
+                            <Box sx={{ backgroundColor: AppColors.main.primary, width: '40px', aspectRatio: '1', marginRight: '12px' }}></Box>
+                            Primary
                         </Item>
                     </Grid>
                 </Grid>

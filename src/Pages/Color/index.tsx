@@ -17,11 +17,7 @@ const Item = styled(Paper)(() => ({
 function Color() {
     return (
         <AppBox>
-            <MainContentHeader>
-                App Colors
-            </MainContentHeader>
             <Box sx={{
-                padding: '24px',
                 display: 'flex',
                 flexDirection: 'column',
                 gap: '20px'
@@ -57,7 +53,7 @@ function Color() {
                         <Box sx={{ ...AppText.Sub_Title }}>Text1: {AppText.List_Title.color}</Box>
                     </Grid>
                     <Grid item xs={3}>
-                        <Box sx={{ ...AppText.Sub_Title }}>Text2: {AppText.Body_Text.color}</Box>
+                        <Box sx={{ ...AppText.Sub_Title }}>Text2/Border: {AppText.Body_Text.color}</Box>
                     </Grid>
                     <Grid item xs={3}>
                         <Box sx={{ ...AppText.Sub_Title }}>Main Background: {AppColors.text.white}</Box>
