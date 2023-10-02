@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/porttool_ui/static/css/main.a4bcf98a.css",
-    "main.js": "/porttool_ui/static/js/main.b0c458bb.js",
+    "main.css": "/porttool_ui/static/css/main.e439386e.css",
+    "main.js": "/porttool_ui/static/js/main.89293d90.js",
     "static/js/787.ad6a025a.chunk.js": "/porttool_ui/static/js/787.ad6a025a.chunk.js",
     "static/media/port_tool_dark.png": "/porttool_ui/static/media/port_tool_dark.acd897251bbf6d8dc064.png",
     "index.html": "/porttool_ui/index.html",
-    "main.a4bcf98a.css.map": "/porttool_ui/static/css/main.a4bcf98a.css.map",
-    "main.b0c458bb.js.map": "/porttool_ui/static/js/main.b0c458bb.js.map",
+    "main.e439386e.css.map": "/porttool_ui/static/css/main.e439386e.css.map",
+    "main.89293d90.js.map": "/porttool_ui/static/js/main.89293d90.js.map",
     "787.ad6a025a.chunk.js.map": "/porttool_ui/static/js/787.ad6a025a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a4bcf98a.css",
-    "static/js/main.b0c458bb.js"
+    "static/css/main.e439386e.css",
+    "static/js/main.89293d90.js"
   ]
 }
