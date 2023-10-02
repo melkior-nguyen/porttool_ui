@@ -38,14 +38,14 @@ export const AppColors = {
         primary_hover: '#10239e',
         primary_gradient: '#3957e8',
         secondary: '#030852',
-        background: '#fff',
+        background: '#f7f7f7',
         success: '#66bb6a',
         info: '#29b6f6',
         warning: '#ffa726',
         error: '#f44336'
     },
     sidebar: {
-        background: '#f7faff',
+        background: '#f0f5ff',
         text: '#8294b1',
         selected: '#7e7d88'
     },

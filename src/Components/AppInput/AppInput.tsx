@@ -11,10 +11,10 @@ function AppInput({ label, placeholder, type, iconType, icon, position, message 
             <label htmlFor="first_names" className="flex item-center gap-x-2 m-0" style={{ ...AppText.Input_Label }}>
                 {label}
                 {iconType !== 'tooltip' ?
-                    <IconWrapper widthIcon='20px' iconColor={AppColors.main.primary} >
+                    <IconWrapper widthIcon='16px' iconColor={AppColors.main.primary} >
                         {icon}
                     </IconWrapper> :
-                    <AppTooltip widthIcon='20px' iconColor={AppColors.main.primary} position={position} message={message}/>}
+                    <AppTooltip widthIcon='16px' iconColor={AppColors.main.primary} position={position} message={message}/>}
                 :
             </label>
             <input type={type} id="first_name" className=" text-gray-900 text-xl  block w-full p-4 d outline-none"

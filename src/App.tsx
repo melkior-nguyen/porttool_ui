@@ -5,7 +5,7 @@ import AppHeader from './Components/AppHeader/AppHeader';
 
 
 function App() {
-  const [currContent, setCurrContent] = useState<string>('color')
+  const [currContent, setCurrContent] = useState<string>('Color')
   return (
     <div className="App" style={{ display: 'flex', gap: 0, position: 'relative' }}>
       <AppHeader />

@@ -17,7 +17,7 @@ export const AppText = {
         fontSize: '16px',
         lineHeight: '24px',
         fontWeight: '600',
-        color: AppColors.main.secondary
+        color: AppColors.main.primary
     },
     Body_Text: {
         fontSize: '14px',
@@ -32,10 +32,10 @@ export const AppText = {
         color: AppColors.text.black
     },
     Input_Label: {
-        fontSize: '16px',
+        fontSize: '14px',
         lineHeight: '24px',
         fontWeight: '300',
-        color: AppColors.main.primary
+        color: AppColors.text.black
     },
     Caption: {
         fontSize: '14px',

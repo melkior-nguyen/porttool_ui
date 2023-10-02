@@ -108,7 +108,7 @@ function Typography() {
                     </Grid>
                     <Grid item xs={2}>
                         <Item>
-                            <Box sx={{ backgroundColor: AppColors.main.secondary, width: '40px', aspectRatio: '1', marginRight: '12px' }}></Box>
+                            <Box sx={{ backgroundColor: AppColors.main.primary, width: '40px', aspectRatio: '1', marginRight: '12px' }}></Box>
                             Secondary
                         </Item>
                     </Grid>
@@ -210,7 +210,7 @@ function Typography() {
                         <Item sx={{ flexDirection: 'column', justifyContent: 'center' }}>
                             <p style={{ display: 'flex', width: '100%' }}>
                                 Font Size
-                                <p style={{ width: '55%', marginLeft: 'auto' }}>16px</p>
+                                <p style={{ width: '55%', marginLeft: 'auto' }}>14px</p>
                             </p>
                             <p style={{ display: 'flex', width: '100%' }}>
                                 Line Height
@@ -224,8 +224,8 @@ function Typography() {
                     </Grid>
                     <Grid item xs={2}>
                         <Item>
-                            <Box sx={{ backgroundColor: AppColors.main.primary, width: '40px', aspectRatio: '1', marginRight: '12px' }}></Box>
-                            Primary
+                            <Box sx={{ backgroundColor: AppColors.text.black, width: '40px', aspectRatio: '1', marginRight: '12px' }}></Box>
+                            Text1
                         </Item>
                     </Grid>
                 </Grid>

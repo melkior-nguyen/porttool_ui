@@ -40,7 +40,7 @@ function AppHeader() {
                 <IconWrapper widthIcon='20px' iconColor={AppColors.main.primary}>
                     <AiOutlineBell />
                 </IconWrapper>
-                <span style={{ ...AppText.Body_Text }}>
+                <span style={{ ...AppText.Body_Text, fontSize: '12px' }}>
                     Nguyễn Minh Hiếu
                 </span>
                 <Box sx={{

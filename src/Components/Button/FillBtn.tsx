@@ -2,7 +2,7 @@ import { Button } from '@mui/material'
 import React, { useState, useEffect } from 'react'
 import { AppColors, appColor } from '../../AppColor'
 
-function FillBtn({ size, label, icon }: any) {
+function FillBtn({ size, label, icon, onClick }: any) {
     const [sizeBtn, setSizeBtn] = useState<string[]>([])
     const [sizeText, setSizeText] = useState<string>('')
     const [sizeIcon, setSizeIcon] = useState<string>('')
@@ -61,7 +61,7 @@ function FillBtn({ size, label, icon }: any) {
             '&:active': {
                 transform: 'scale(0.98)'
             }
-        }}>
+        }} onClick={onClick}>
             {size !== 'small' && icon !== undefined &&
                 <div style={{ fontSize: sizeIcon }}>
                     {icon}

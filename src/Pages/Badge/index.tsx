@@ -8,7 +8,7 @@ import AppRadio from '../../Components/AppRadio/AppRadio'
 import { Radio } from '@mui/material'
 import AppToggle from '../../Components/AppToggle/AppToggle'
 
-function index() {
+function Badge() {
     return (
         <AppBox>
             <Box sx={{
@@ -66,4 +66,4 @@ function index() {
     )
 }
 
-export default index
+export default Badge

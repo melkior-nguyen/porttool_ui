@@ -8,32 +8,40 @@ import Search from '../../Pages/Search'
 import Dropdown from '../../Pages/Dropdown'
 import Badge from '../../Pages/Badge'
 import Input from '../../Pages/Input'
+import Form from '../../Pages/Form'
+import UserProfile from '../../Pages/Form/UserProfile'
 
 function MainContent({ currContent }: any) {
     return (
         <>
-            {currContent === 'color' &&
+            {currContent === 'Color' &&
                 <Color />
             }
-            {currContent === 'typography' &&
+            {currContent === 'Typography' &&
                 <Typography />
             }
-            {currContent === 'button' &&
+            {currContent === 'Button' &&
                 <Button />
             }
-            {currContent === 'search' &&
-                <Search />
-            }
-            {currContent === 'dropdown' &&
-                <Dropdown />
-            }
-            {currContent === 'badge' &&
+            {currContent === 'Badge' &&
                 <Badge />
             }
-            {currContent === 'input' &&
+            {currContent === 'Search' &&
+                <Search />
+            }
+            {currContent === 'Dropdown' &&
+                <Dropdown />
+            }
+            {currContent === 'Input' &&
                 <Input />
             }
-            {currContent === 'layout' &&
+            {currContent === 'Form' &&
+                <Form />
+            }
+            {currContent === 'UserProfile' &&
+                <UserProfile />
+            }
+            {currContent === 'Layout' &&
                 <Layout />
             }
         </>

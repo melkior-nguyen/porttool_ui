@@ -56,7 +56,7 @@ function Color() {
                         <Box sx={{ ...AppText.Sub_Title }}>Text2/Border: {AppText.Body_Text.color}</Box>
                     </Grid>
                     <Grid item xs={3}>
-                        <Box sx={{ ...AppText.Sub_Title }}>Main Background: {AppColors.text.white}</Box>
+                        <Box sx={{ ...AppText.Sub_Title }}>Main Background: {AppColors.main.background}</Box>
                     </Grid>
                     <Grid item xs={3}>
                         <Box sx={{ ...AppText.Sub_Title }}>Sidebar Background: {AppColors.sidebar.background}</Box>
@@ -70,7 +70,7 @@ function Color() {
                         <Item sx={{ backgroundColor: AppText.Body_Text.color }}></Item>
                     </Grid>
                     <Grid item xs={3}>
-                        <Item sx={{ backgroundColor: AppColors.text.white }}></Item>
+                        <Item sx={{ backgroundColor: AppColors.main.background }}></Item>
                     </Grid>
                     <Grid item xs={3}>
                         <Item sx={{ backgroundColor: AppColors.sidebar.background }}></Item>

@@ -54,10 +54,11 @@ function Dropdown4({ label, data }: any) {
             px: '10px',
             cursor: 'pointer',
             position: 'relative',
+            gap: '6px'
             // boxShadow: AppShadow.boxShadow
         }} >
 
-            <Box sx={{ flex: '1', fontSize: '14px', userSelect: 'none', color: AppText.Body_Text.color }} onClick={handleClick}>
+            <Box sx={{ flex: '1', fontSize: '14px', userSelect: 'none', color: AppColors.main.primary }} onClick={handleClick}>
                 {select === 'None' ? label : select}
             </Box>
 
@@ -78,7 +79,7 @@ function Dropdown4({ label, data }: any) {
                 {data.map((item: any, index: any) => {
                     return (
                         <li key={index} className='dropdown_item' >
-                            <span style={{ color: AppText.Body_Text.color }} onClick={() => handleSelect(item)}>{item}</span>
+                            <span style={{ color: AppColors.main.primary }} onClick={() => handleSelect(item)}>{item}</span>
                         </li>
                     )
                 })}

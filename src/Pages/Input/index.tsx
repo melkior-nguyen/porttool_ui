@@ -18,8 +18,8 @@ function index() {
                     width: '60%',
                     display: 'flex',
                     padding: '24px',
-                    border: '1px solid #acacac40',
                     borderRadius: '8px',
+                    backgroundColor: '#fff'
                 }}>
                     <AppTextField />
                 </Box>
@@ -27,8 +27,8 @@ function index() {
                     width: '60%',
                     display: 'flex',
                     padding: '24px',
-                    border: '1px solid #acacac40',
                     borderRadius: '8px',
+                    backgroundColor: '#fff'
                 }}>
                     <AppTextField2 />
                 </Box>
