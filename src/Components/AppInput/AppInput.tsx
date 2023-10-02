@@ -2,16 +2,19 @@ import React, { useState } from 'react'
 import { AppColors, appColor } from '../../AppColor'
 import { AppText } from '../../AppText'
 import IconWrapper from '../IconWrapper/IconWrapper'
+import AppTooltip from '../AppTooltip/AppTooltip'
 
-function AppInput({ label, placeholder, type, icon }: any) {
+function AppInput({ label, placeholder, type, iconType, icon, position, message }: any) {
     const [isFocused, setIsFocused] = useState<boolean>(false)
     return (
         <>
-            <label htmlFor="first_name" className="flex item-center gap-x-2 m-0" style={{ ...AppText.Input_Label }}>
+            <label htmlFor="first_names" className="flex item-center gap-x-2 m-0" style={{ ...AppText.Input_Label }}>
                 {label}
-                <IconWrapper iconColor={AppColors.main.primary}>
-                    {icon}
-                </IconWrapper>
+                {iconType !== 'tooltip' ?
+                    <IconWrapper widthIcon='20px' iconColor={AppColors.main.primary} >
+                        {icon}
+                    </IconWrapper> :
+                    <AppTooltip widthIcon='20px' iconColor={AppColors.main.primary} position={position} message={message}/>}
                 :
             </label>
             <input type={type} id="first_name" className=" text-gray-900 text-xl  block w-full p-4 d outline-none"

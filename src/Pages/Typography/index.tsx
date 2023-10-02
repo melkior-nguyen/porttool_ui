@@ -41,41 +41,6 @@ function Typography() {
                         <Box sx={{ ...AppText.Sub_Title }}>Color:</Box>
                     </Grid>
                 </Grid>
-                {/* Heading Title */}
-                {/* <Grid container spacing={2} >
-                    <Grid item xs={5}>
-                        <Item >
-                            <span style={{ ...AppText.Heading_Title }}>
-                                Dashboard
-                            </span>
-                        </Item>
-                    </Grid>
-                    <Grid item xs={2}>
-                        <Item>Heading Title</Item>
-                    </Grid>
-                    <Grid item xs={3}>
-                        <Item sx={{ flexDirection: 'column', justifyContent: 'center' }}>
-                            <p style={{ display: 'flex', width: '100%' }}>
-                                Font Size
-                                <p style={{ width: '55%', marginLeft: 'auto' }}>24px</p>
-                            </p>
-                            <p style={{ display: 'flex', width: '100%' }}>
-                                Line Height
-                                <p style={{ width: '55%', marginLeft: 'auto' }}>36px</p>
-                            </p>
-                            <p style={{ display: 'flex', width: '100%' }}>
-                                Font Weight
-                                <p style={{ width: '55%', marginLeft: 'auto' }}>700</p>
-                            </p>
-                        </Item>
-                    </Grid>
-                    <Grid item xs={2}>
-                        <Item>
-                            <Box sx={{ backgroundColor: AppColors.main.primary, width: '40px', aspectRatio: '1', marginRight: '12px' }}></Box>
-                            Primary
-                        </Item>
-                    </Grid>
-                </Grid> */}
 
                 {/* main Title */}
                 <Grid container spacing={2}>
