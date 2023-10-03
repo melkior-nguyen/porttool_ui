@@ -65,7 +65,7 @@ function AppTooltip({ widthIcon, iconColor, position, message }: any) {
           width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'center', color: iconColor,
           cursor: 'pointer',
         }
-      }} ref={iconRef} onClick={() => setActiveTooltip(true)} >
+      }} ref={iconRef} onClick={() => setActiveTooltip(!activeTooltip)} >
         <AiOutlineQuestionCircle />
         {activeTooltip &&
           <Box sx={{

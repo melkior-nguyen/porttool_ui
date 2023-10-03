@@ -210,7 +210,7 @@ function Typography() {
                         <Item sx={{ flexDirection: 'column', justifyContent: 'center' }}>
                             <p style={{ display: 'flex', width: '100%' }}>
                                 Font Size
-                                <p style={{ width: '55%', marginLeft: 'auto' }}>14px</p>
+                                <p style={{ width: '55%', marginLeft: 'auto' }}>16px</p>
                             </p>
                             <p style={{ display: 'flex', width: '100%' }}>
                                 Line Height

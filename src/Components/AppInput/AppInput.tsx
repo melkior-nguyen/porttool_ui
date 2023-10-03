@@ -22,7 +22,7 @@ function AppInput({ label, placeholder, type, iconType, icon, position, message 
                     border: isFocused ? `1px solid ${AppColors.main.primary}` : `1px solid ${AppText.Body_Text.color}`,
                     borderRadius: '4px',
                     boxShadow: 'inset 0 1px 2px rgba(0,0,0,.1)',
-                    color: AppText.Body_Text.color
+                    ...AppText.Body_Text
                 }}
                 onFocus={() => setIsFocused(true)} onBlur={() => setIsFocused(false)}
             />

@@ -32,7 +32,7 @@ export const AppText = {
         color: AppColors.text.black
     },
     Input_Label: {
-        fontSize: '14px',
+        fontSize: '16px',
         lineHeight: '24px',
         fontWeight: '300',
         color: AppColors.text.black

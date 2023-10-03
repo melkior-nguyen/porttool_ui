@@ -20,19 +20,19 @@ function Dropdown() {
         <Box component={Paper} sx={{ padding: '12px', width: 'max-content' }}>
           <span style={{ ...AppText.Sub_Title }}> Dropdown 1: </span>
           <Box sx={{ marginTop: '12px', display: 'flex', alignItems: 'center', gap: '12px', width: '300px' }}>
-            <Dropdown1 label='Country' data={data2}/>
+            <Dropdown1 label='Country' data={data2} />
           </Box>
         </Box>
         <Box component={Paper} sx={{ padding: '12px', width: 'max-content' }}>
           <span style={{ ...AppText.Sub_Title }}> Dropdown 2: </span>
           <Box sx={{ marginTop: '12px', display: 'flex', alignItems: 'center', gap: '12px', width: '300px' }}>
-            <Dropdown2 label='Country' data={data1}/>
+            <Dropdown2 label='Country' data={data1} />
           </Box>
         </Box>
         <Box component={Paper} sx={{ padding: '12px', width: 'max-content' }}>
           <span style={{ ...AppText.Sub_Title }}> Dropdown 3: </span>
           <Box sx={{ marginTop: '12px', display: 'flex', alignItems: 'center', gap: '12px', width: '300px' }}>
-            <Dropdown3 label='Country' data={data1}/>
+            <Dropdown3 label='Country' data={data1} />
           </Box>
         </Box>
       </Box>

@@ -10,9 +10,12 @@ import { BsGenderAmbiguous, BsTelephone } from 'react-icons/bs'
 import FillBtn from '../../Components/Button/FillBtn'
 import { AiOutlineUser } from 'react-icons/ai';
 import { PiPasswordLight } from 'react-icons/pi';
+import { LiaAddressBook } from 'react-icons/lia';
 import { MdOutlineMail } from 'react-icons/md';
 import AppTooltip from '../../Components/AppTooltip/AppTooltip'
 import IconWrapper from '../../Components/IconWrapper/IconWrapper'
+import Dropdown1 from '../../Components/Dropdown/Dropdown1'
+import Dropdown2 from '../../Components/Dropdown/Dropdown2'
 
 
 const Item = styled(Box)(({ theme }) => ({
@@ -59,11 +62,11 @@ function UserProfile() {
                         flex: '1', padding: '24px', display: 'flex',
                         flexDirection: 'column',
                         border: `1px solid ${AppText.Body_Text.color}`,
-                        borderRadius: '16px', width: '65%'
+                        borderRadius: '16px', width: '70%'
                     }}>
                         <Typography sx={{ ...AppText.Sub_Title }}>Your Profile</Typography>
                         <Box sx={{ marginTop: '24px' }}>
-                            <Grid container spacing={3}>
+                            <Grid container spacing={2}>
                                 <Grid item xs={6} md={6}>
                                     <Item>
                                         <AppInput label={'Full Name'} placeholder={'Your name'} type={'text'} icon={<AiOutlineUser />} />
@@ -71,22 +74,34 @@ function UserProfile() {
                                 </Grid>
                                 <Grid item xs={6} md={6}>
                                     <Item>
-                                        <AppInput label={'Password'} placeholder={'*****'} type={'password'} icon={<PiPasswordLight />} />
-                                    </Item>
-                                </Grid>
-                                <Grid item xs={6} md={6}>
-                                    <Item>
-                                        <AppInput label={'Username'} placeholder={'Melkior'} type={'text'} iconType='tooltip' position='left' message={userNameMess} />
-                                    </Item>
-                                </Grid>
-                                <Grid item xs={6} md={6}>
-                                    <Item>
-                                        <AppInput label={'Confirm Password'} placeholder={'*****'} type={'password'} iconType='tooltip' position='right' message={passwordMess} />
+                                        <AppInput label={'Username'} placeholder={'Melkior'} type={'text'} iconType='tooltip' position='right' message={userNameMess} />
                                     </Item>
                                 </Grid>
                                 <Grid item xs={6} md={3}>
                                     <Item>
-                                        <AppInput label={'Gender'} placeholder={'Male'} type={'number'} icon={<BsGenderAmbiguous />} />
+                                        <AppInput label={'Password'} placeholder={'*****'} type={'password'} icon={<PiPasswordLight />} />
+                                    </Item>
+                                </Grid>
+                                <Grid item xs={6} md={3}>
+                                    <Item>
+                                        <AppInput label={'Confirm Password'} placeholder={'*****'} type={'password'} iconType='tooltip' position='center' message={passwordMess} />
+                                    </Item>
+                                </Grid>
+                                <Grid item xs={6} md={6}>
+                                    <Item>
+                                        <AppInput label={'Email'} placeholder={'abc@gmail.com'} type={'email'} icon={<MdOutlineMail />} />
+                                    </Item>
+                                </Grid>
+                                <Grid item xs={6} md={3}>
+                                    <Item>
+                                        <label htmlFor="first_names" className="flex item-center gap-x-2 m-0" style={{ ...AppText.Input_Label }}>
+                                            Gender
+                                            <IconWrapper widthIcon='16px' iconColor={AppColors.main.primary}>
+                                                <BsGenderAmbiguous />
+                                            </IconWrapper>
+                                            :
+                                        </label>
+                                        <Dropdown2 label='Male' data={['Male', 'Female', 'Other']} />
                                     </Item>
                                 </Grid>
                                 <Grid item xs={6} md={3}>
@@ -96,12 +111,17 @@ function UserProfile() {
                                 </Grid>
                                 <Grid item xs={6} md={6}>
                                     <Item>
+                                        <AppInput label={'Address'} placeholder={'District...'} type={'text'} icon={<LiaAddressBook />} />
+                                    </Item>
+                                </Grid>
+                                <Grid item xs={6} md={6}>
+                                    <Item>
                                         <AppInput label={'Telephone'} placeholder={'0989...'} type={'number'} icon={<BsTelephone />} />
                                     </Item>
                                 </Grid>
-                                <Grid item xs={6} md={12}>
+                                <Grid item xs={6} md={6}>
                                     <Item>
-                                        <AppInput label={'Email'} placeholder={'abc@gmail.com'} type={'email'} icon={<MdOutlineMail />} />
+                                        <AppInput label={'Country'} placeholder={'VietName'} type={'text'} iconType='tooltip' position='right' message={'Test message'} />
                                     </Item>
                                 </Grid>
                             </Grid>

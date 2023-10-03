@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import './sidebar.css'
 import { Box } from '@mui/material'
 import logo from '../../Assets/images/port_tool_dark.png'
@@ -21,7 +22,7 @@ function Sidebar({ setCurrContent }: any) {
 
     const handleSelect = (text: any) => {
         setItemSelect(text)
-        setCurrContent(text)
+        // setCurrContent(text)
         setActiveMultiSelect('')
     }
 
@@ -37,7 +38,7 @@ function Sidebar({ setCurrContent }: any) {
 
     const handleSelect2 = (text: any) => {
         setItemSelect(text)
-        setCurrContent(text)
+        // setCurrContent(text)
     }
 
     useEffect(() => {
@@ -86,12 +87,12 @@ function Sidebar({ setCurrContent }: any) {
                                     <Box sx={{ ...multiItemBoxStyle }}>
                                         {group_item.children?.map((item, index) => {
                                             return (
-                                                <Box key={index} className={itemSelect === item.name ? 'sidebar_item-second select' : 'sidebar_item-second'} onClick={() => handleSelect2(item.name)}>
+                                                <Link to={item.path} key={index} className={itemSelect === item.name ? 'sidebar_item-second select' : 'sidebar_item-second'} onClick={() => handleSelect2(item.name)}>
                                                     <IconWrapper widthIcon='20px' iconColor={AppColors.main.secondary}>
                                                         {item.icon}
                                                     </IconWrapper>
                                                     {item.name}
-                                                </Box>
+                                                </Link>
                                             )
                                         })}
                                     </Box>
@@ -100,12 +101,12 @@ function Sidebar({ setCurrContent }: any) {
                         )
                     } else {
                         return (
-                            <Box key={index} className={itemSelect === group_item.name ? 'sidebar_item select' : 'sidebar_item'} onClick={() => handleSelect(group_item.name)}>
+                            <Link to={`${group_item.path}`} key={index} className={itemSelect === group_item.name ? 'sidebar_item select' : 'sidebar_item'} onClick={() => handleSelect(group_item.name)}>
                                 <IconWrapper widthIcon='20px' iconColor={AppColors.main.secondary}>
                                     {group_item.icon}
                                 </IconWrapper>
                                 {group_item.name}
-                            </Box>
+                            </Link>
                         )
                     }
                 })}
@@ -125,21 +126,25 @@ const sidebar_data = [
             {
                 type: 'group_item',
                 name: 'Color',
+                path: '/design/color',
                 icon: <BiSolidColor />,
             },
             {
                 type: 'group_item',
                 name: 'Typography',
+                path: '/design/typography',
                 icon: <IoTextOutline />,
             },
             {
                 type: 'group_item',
                 name: 'Button',
+                path: '/design/button',
                 icon: <CgPlayButtonR />,
             },
             {
                 type: 'group_item',
                 name: 'Badge',
+                path: '/design/badge',
                 icon: <HiOutlineBadgeCheck />,
             }
         ]
@@ -147,30 +152,35 @@ const sidebar_data = [
     {
         type: 'item',
         name: 'Search',
+        path: '/search',
         icon: <HiOutlineSearchCircle />,
 
     },
     {
         type: 'item',
         name: 'Dropdown',
+        path: '/dropdown',
         icon: <RxDropdownMenu />,
 
     },
     {
         type: 'item',
         name: 'Input',
+        path: '/input',
         icon: <BsInputCursor />,
 
     },
     {
         type: 'item',
         name: 'Table',
+        path: '/table',
         icon: <AiOutlineTable />,
 
     },
     {
         type: 'item',
         name: 'Accordion',
+        path: '/accordion',
         icon: <TfiLayoutAccordionList />,
 
     },
@@ -182,11 +192,13 @@ const sidebar_data = [
             {
                 type: 'group_item',
                 name: 'UserProfile',
+                path: '/form/userprofile',
                 icon: <AiOutlineUser />
             },
             {
                 type: 'group_item',
                 name: 'Security',
+                path: '/form/security',
                 icon: <AiOutlineSecurityScan />
             }
         ]
@@ -195,7 +207,7 @@ const sidebar_data = [
     {
         type: 'item',
         name: 'Layout',
-        icon: <AiOutlineLayout />,
-
+        path: '/layout',
+        icon: <AiOutlineLayout />
     },
 ]
